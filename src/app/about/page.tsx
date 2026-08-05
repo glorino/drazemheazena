@@ -12,7 +12,6 @@ import {
   Star,
   ArrowRight,
   Cross,
-  Target,
   Compass,
   BookOpen,
   Crown,
@@ -330,7 +329,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Vision & Mission */}
+      {/* Mission */}
       <section id="vision" className="py-24 bg-dark relative overflow-hidden">
         <div className="absolute inset-0 bg-pattern opacity-30" />
         <div className="absolute top-20 left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
@@ -343,38 +342,38 @@ export default function AboutPage() {
                 Our Foundation
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Vision & <span className="text-gradient">Mission</span>
+                Our <span className="text-gradient">Mission</span>
               </h2>
             </div>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <FadeIn direction="left" delay={0.2}>
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 h-full">
-                <div className="w-16 h-16 bg-gradient-to-br from-gold to-gold-light rounded-2xl flex items-center justify-center mb-6">
-                  <Target className="w-8 h-8 text-dark" />
+          <FadeIn direction="up" delay={0.2}>
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-10 md:p-14 text-center relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-40 h-40 bg-gold/10 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-40 h-40 bg-primary/10 rounded-full blur-3xl" />
+                <div className="relative z-10">
+                  <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-3xl flex items-center justify-center mx-auto mb-8">
+                    <Compass className="w-10 h-10 text-white" />
+                  </div>
+                  <blockquote className="text-xl md:text-2xl text-gray-300 leading-relaxed italic mb-8">
+                    &ldquo;Our mission is to share God&apos;s love and grace by
+                    fostering spiritual growth, serving our community with
+                    compassion, and building meaningful relationships. We are
+                    dedicated to living out our faith through worship, outreach,
+                    and impactful service.&rdquo;
+                  </blockquote>
+                  <div className="flex items-center justify-center gap-4">
+                    <div className="h-px w-16 bg-gold/50" />
+                    <span className="text-gold font-semibold text-sm tracking-wider uppercase">
+                      Turning Point Gospel Center International
+                    </span>
+                    <div className="h-px w-16 bg-gold/50" />
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
-                <p className="text-xl text-gray-300 leading-relaxed italic">
-                  &ldquo;To raise a generation of believers who are agents of
-                  transformation in their sphere of influence.&rdquo;
-                </p>
               </div>
-            </FadeIn>
-
-            <FadeIn direction="right" delay={0.3}>
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 h-full">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mb-6">
-                  <Compass className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
-                <p className="text-xl text-gray-300 leading-relaxed italic">
-                  &ldquo;To preach the undiluted word of God, raise leaders, and
-                  impact lives through practical Christianity.&rdquo;
-                </p>
-              </div>
-            </FadeIn>
-          </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
