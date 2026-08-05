@@ -117,12 +117,36 @@ export default function ContactPage() {
     message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 5000);
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+    setIsSubmitting(true);
+    setSubmitMessage("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setIsSubmitted(true);
+        setSubmitMessage(data.message);
+        setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setSubmitMessage("");
+        }, 5000);
+      } else {
+        setSubmitMessage(data.error || "Failed to submit. Please try again.");
+      }
+    } catch {
+      setSubmitMessage("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -264,14 +288,20 @@ export default function ContactPage() {
                         placeholder="Type your message here..."
                       />
                     </div>
+                    {submitMessage && (
+                      <div className={`p-4 rounded-xl text-sm font-medium ${isSubmitted ? "bg-green-50 text-green-700 border border-green-200" : "bg-red-50 text-red-700 border border-red-200"}`}>
+                        {submitMessage}
+                      </div>
+                    )}
                     <motion.button
                       type="submit"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="w-full bg-gradient-to-r from-primary to-primary-dark text-white py-4 rounded-xl font-semibold text-lg flex items-center justify-center gap-2 hover:shadow-lg transition-shadow"
+                      disabled={isSubmitting}
+                      whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                      whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                      className="w-full bg-gradient-to-r from-primary to-primary-dark text-white py-4 rounded-xl font-semibold text-lg flex items-center justify-center gap-2 hover:shadow-lg transition-shadow disabled:opacity-50"
                     >
                       <Send className="w-5 h-5" />
-                      Send Message
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </motion.button>
                   </form>
                 </div>

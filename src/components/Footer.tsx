@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import {
   Mail,
@@ -44,6 +45,34 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [subscribeStatus, setSubscribeStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [subscribeMessage, setSubscribeMessage] = useState("");
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubscribeStatus("loading");
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setSubscribeStatus("success");
+        setSubscribeMessage(data.message);
+        setEmail("");
+      } else {
+        setSubscribeStatus("error");
+        setSubscribeMessage(data.error);
+      }
+    } catch {
+      setSubscribeStatus("error");
+      setSubscribeMessage("Something went wrong. Please try again.");
+    }
+  };
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -68,15 +97,29 @@ export default function Footer() {
               </p>
             </div>
             <div className="flex w-full md:w-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 md:w-80 px-5 py-3 rounded-l-full bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-gold transition-colors"
-              />
-              <button className="bg-gradient-to-r from-primary to-primary-dark text-white px-6 py-3 rounded-r-full font-semibold hover:shadow-lg transition-all">
-                Subscribe
-              </button>
+              <form onSubmit={handleSubscribe} className="flex w-full md:w-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="flex-1 md:w-80 px-5 py-3 rounded-l-full bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-gold transition-colors"
+                />
+                <button
+                  type="submit"
+                  disabled={subscribeStatus === "loading"}
+                  className="bg-gradient-to-r from-primary to-primary-dark text-white px-6 py-3 rounded-r-full font-semibold hover:shadow-lg transition-all disabled:opacity-50"
+                >
+                  {subscribeStatus === "loading" ? "..." : "Subscribe"}
+                </button>
+              </form>
             </div>
+            {subscribeMessage && (
+              <p className={`text-sm mt-2 ${subscribeStatus === "success" ? "text-green-400" : "text-red-400"}`}>
+                {subscribeMessage}
+              </p>
+            )}
           </div>
         </div>
       </div>
