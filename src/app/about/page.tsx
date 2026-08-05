@@ -59,24 +59,56 @@ const values = [
     title: "Unwavering Faith",
     description:
       "We stand firm on the Word of God, believing in the supernatural power of faith to transform every situation.",
+    color: "from-primary to-primary-dark",
   },
   {
     icon: Heart,
     title: "Genuine Love",
     description:
       "We demonstrate Christ's love through authentic relationships, compassionate service, and genuine care for one another.",
+    color: "from-pink-500 to-rose-600",
   },
   {
     icon: Globe,
     title: "Global Vision",
     description:
       "We are committed to spreading the Gospel to every nation, tribe, and tongue, fulfilling the Great Commission.",
+    color: "from-blue-500 to-indigo-600",
   },
   {
     icon: Shield,
     title: "Integrity",
     description:
       "We uphold the highest standards of honesty, accountability, and moral excellence in all our dealings.",
+    color: "from-emerald-500 to-green-600",
+  },
+  {
+    icon: BookOpen,
+    title: "Biblical Excellence",
+    description:
+      "We are committed to the undiluted Word of God, teaching and applying Scripture with precision and power.",
+    color: "from-gold to-gold-light",
+  },
+  {
+    icon: Users,
+    title: "Community",
+    description:
+      "We build a loving family where every person is valued, supported, and empowered to fulfill their God-given purpose.",
+    color: "from-purple-500 to-violet-600",
+  },
+  {
+    icon: Star,
+    title: "Servant Leadership",
+    description:
+      "We lead by serving, following the example of Christ who came not to be served but to serve.",
+    color: "from-amber-500 to-orange-600",
+  },
+  {
+    icon: Crown,
+    title: "Kingdom Impact",
+    description:
+      "We are dedicated to making a lasting impact in our communities, nation, and the world through practical Christianity.",
+    color: "from-cyan-500 to-teal-600",
   },
 ];
 
@@ -343,18 +375,42 @@ export default function AboutPage() {
               </div>
             </FadeIn>
           </div>
+        </div>
+      </section>
+
+      {/* Core Values */}
+      <section className="py-24 bg-cream">
+        <div className="max-w-7xl mx-auto px-4">
+          <FadeIn direction="up">
+            <div className="text-center mb-16">
+              <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
+                What Guides Us
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
+                Our Core <span className="text-gradient">Values</span>
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                These fundamental principles shape everything we do and define who we are as a church family.
+              </p>
+            </div>
+          </FadeIn>
 
           <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value) => (
               <StaggerItem key={value.title}>
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition-colors">
-                  <value.icon className="w-10 h-10 text-gold mx-auto mb-4" />
-                  <h4 className="text-lg font-bold text-white mb-2">
-                    {value.title}
-                  </h4>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {value.description}
-                  </p>
+                <div className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-gold/30 overflow-hidden">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary/5 to-gold/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-500" />
+                  <div className="relative z-10">
+                    <div className={`w-14 h-14 bg-gradient-to-br ${value.color} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      <value.icon className="w-7 h-7 text-white" />
+                    </div>
+                    <h4 className="text-lg font-bold text-dark mb-3 group-hover:text-primary transition-colors">
+                      {value.title}
+                    </h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {value.description}
+                    </p>
+                  </div>
                 </div>
               </StaggerItem>
             ))}

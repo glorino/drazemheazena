@@ -67,17 +67,16 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["+234 XXX XXX XXXX", "+234 XXX XXX XXXX"],
-    link: "tel:+234XXXXXXXXXX",
+    details: ["0810 765 9761"],
+    link: "tel:08107659761",
   },
   {
     icon: Mail,
     title: "Email",
     details: [
-      "info@turningpointgospelcentre.com",
-      "pastor@turningpointgospelcentre.com",
+      "support@turningpointgospelcentre.com",
     ],
-    link: "mailto:info@turningpointgospelcentre.com",
+    link: "mailto:support@turningpointgospelcentre.com",
   },
 ];
 
@@ -96,13 +95,13 @@ const socialLinks = [
   },
   {
     icon: InstagramIcon,
-    href: "https://instagram.com",
+    href: "https://www.instagram.com/weloveturningpoint_?igsh=bHZhdGI4MHJkZmk4",
     label: "Instagram",
     color: "bg-pink-500",
   },
   {
     icon: YoutubeIcon,
-    href: "https://youtube.com/@weloveturningpoint",
+    href: "https://youtube.com/@weloveturningpoint?si=0367S9PWnPIfW07s",
     label: "YouTube",
     color: "bg-red-600",
   },

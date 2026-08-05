@@ -50,10 +50,10 @@ export default function Header() {
       <div className="bg-dark text-white text-sm py-2 hidden md:block">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2">
+            <a href="tel:08107659761" className="flex items-center gap-2 hover:text-gold transition-colors">
               <Phone className="w-3.5 h-3.5 text-gold" />
-              <span>+234 XXX XXX XXXX</span>
-            </div>
+              <span>0810 765 9761</span>
+            </a>
             <div className="flex items-center gap-2">
               <MapPin className="w-3.5 h-3.5 text-gold" />
               <span>Irabor Street, Upper Mission Extension, Benin City</span>

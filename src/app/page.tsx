@@ -31,6 +31,7 @@ import {
   StaggerItem,
   Floating,
 } from "@/components/Animations";
+import CountdownTimer from "@/components/CountdownTimer";
 import { useState, useEffect } from "react";
 
 const stats = [
@@ -129,6 +130,15 @@ const events = [
   },
 ];
 
+function getNextSunday(): string {
+  const now = new Date();
+  const daysUntilSunday = (7 - now.getDay()) % 7 || 7;
+  const nextSunday = new Date(now);
+  nextSunday.setDate(now.getDate() + daysUntilSunday);
+  nextSunday.setHours(8, 0, 0, 0);
+  return nextSunday.toISOString();
+}
+
 export default function HomePage() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
@@ -149,8 +159,10 @@ export default function HomePage() {
             src="/DSC_3963 copy.jpg.jpeg"
             alt="Dr. Azemhe Azena at the pulpit"
             fill
-            className="object-cover object-center"
+            className="object-cover object-top"
             priority
+            sizes="100vw"
+            style={{ objectPosition: "50% 15%" }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/80 to-dark/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent" />
@@ -462,7 +474,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Upcoming Events */}
+      {/* Upcoming Events with Countdown */}
       <section className="py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn direction="up">
@@ -480,8 +492,37 @@ export default function HomePage() {
             </div>
           </FadeIn>
 
+          {/* Countdown to Next Sunday Service */}
+          <FadeIn direction="up" delay={0.2}>
+            <div className="bg-gradient-to-br from-dark via-dark-light to-primary/30 rounded-3xl p-8 md:p-12 mb-12 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-gold/10 rounded-full blur-3xl" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
+              <div className="relative z-10">
+                <div className="text-center mb-8">
+                  <span className="inline-flex items-center gap-2 bg-gold/20 border border-gold/30 text-gold px-4 py-2 rounded-full text-sm font-medium">
+                    <Sparkles className="w-4 h-4" />
+                    Next Sunday Service
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mt-4">
+                    Sunday Celebration Service
+                  </h3>
+                  <p className="text-gray-400 mt-2">
+                    First Service: 8:00 AM | Second Service: 10:30 AM
+                  </p>
+                </div>
+                <div className="flex justify-center">
+                  <CountdownTimer
+                    targetDate={getNextSunday()}
+                    label="Service starts in"
+                  />
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+
+          {/* Event Cards */}
           <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {events.map((event, index) => (
+            {events.map((event) => (
               <StaggerItem key={event.title}>
                 <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
                   <div className="bg-gradient-to-br from-primary to-primary-dark p-6 text-white">
