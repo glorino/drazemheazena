@@ -27,6 +27,16 @@ import {
   StaggerItem,
 } from "@/components/Animations";
 import { useState } from "react";
+import dynamic from "next/dynamic";
+
+const ChurchMap = dynamic(() => import("@/components/ChurchMap"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-96 bg-gray-200 animate-pulse flex items-center justify-center">
+      <MapPin className="w-8 h-8 text-primary animate-bounce" />
+    </div>
+  ),
+});
 
 const serviceTimes = [
   {
@@ -425,16 +435,7 @@ export default function ContactPage() {
           <FadeIn direction="up">
             <div className="bg-cream rounded-2xl overflow-hidden shadow-xl">
               <div className="h-96 relative">
-                <iframe
-                  src="https://maps.google.com/maps?q=16+Irabor+Street+off+Ewan+Street+Upper+Mission+Extension+Uteh+Benin+City+Nigeria&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="absolute inset-0"
-                />
+                <ChurchMap />
               </div>
               <div className="p-6 text-center">
                 <div className="flex items-center justify-center gap-2 mb-2">
@@ -450,12 +451,12 @@ export default function ContactPage() {
                   Upper Mission Extension, Uteh, Benin City, Edo State, Nigeria
                 </p>
                 <a
-                  href="https://www.google.com/maps/search/16+Irabor+Street+off+Ewan+Street+Upper+Mission+Extension+Uteh+Benin+City"
+                  href="https://www.google.com/maps/dir/?api=1&destination=16+Irabor+Street+off+Ewan+Street+Upper+Mission+Extension+Uteh+Benin+City+Nigeria"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 mt-4 text-primary font-semibold hover:text-primary-dark transition-colors"
                 >
-                  Open in Google Maps
+                  Get Directions on Google Maps
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
