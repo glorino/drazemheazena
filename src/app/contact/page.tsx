@@ -426,7 +426,7 @@ export default function ContactPage() {
             <div className="bg-cream rounded-2xl overflow-hidden shadow-xl">
               <div className="h-96 relative">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5!2d5.62!3d6.38!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjInNDguMCJOIDXCsDM3JzEyLjAiRQ!5e0!3m2!1sen!2sng!4v1234567890!5m2!1sen!2sng&q=16+Irabor+Street+off+Ewan+Street+Upper+Mission+Extension+Uteh+Benin+City"
+                  src="https://maps.google.com/maps?q=16+Irabor+Street+off+Ewan+Street+Upper+Mission+Extension+Uteh+Benin+City+Nigeria&t=&z=17&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
