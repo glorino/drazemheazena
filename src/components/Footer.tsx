@@ -178,7 +178,7 @@ export default function Footer() {
               <div className="flex items-start gap-3 text-gray-400">
                 <MapPin className="w-4 h-4 mt-1" />
                 <span>
-                  Irabor Street, Upper Mission Extension, Benin City, Edo State,
+                  16 Irabor Street off Ewan Street, Upper Mission Extension, Uteh, Benin City, Edo State,
                   Nigeria
                 </span>
               </div>

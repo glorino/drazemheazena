@@ -57,7 +57,7 @@ export default function Header() {
             </a>
             <div className="flex items-center gap-2">
               <MapPin className="w-3.5 h-3.5 text-gold" />
-              <span>Irabor Street, Upper Mission Extension, Benin City</span>
+              <span>16 Irabor St off Ewan St, Upper Mission Ext, Uteh, Benin City</span>
             </div>
           </div>
           <div className="flex items-center gap-2">

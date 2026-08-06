@@ -56,8 +56,8 @@ const contactInfo = [
     icon: MapPin,
     title: "Address",
     details: [
-      "Irabor Street, Upper Mission Extension",
-      "Benin City, Edo State, Nigeria",
+      "16 Irabor Street off Ewan Street",
+      "Upper Mission Extension, Uteh, Benin City, Edo State, Nigeria",
     ],
     link: "https://maps.google.com",
   },
@@ -424,30 +424,40 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn direction="up">
             <div className="bg-cream rounded-2xl overflow-hidden shadow-xl">
-              <div className="h-96 bg-gray-200 relative">
-                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-cream to-cream-dark">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-                    <h3 className="text-xl font-bold text-dark mb-2">
-                      Find Us Here
-                    </h3>
-                    <p className="text-gray-600">
-                      Irabor Street, Upper Mission Extension
-                    </p>
-                    <p className="text-gray-600">
-                      Benin City, Edo State, Nigeria
-                    </p>
-                    <a
-                      href="https://maps.google.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 mt-4 text-primary font-semibold hover:text-primary-dark transition-colors"
-                    >
-                      Open in Google Maps
-                      <ArrowRight className="w-4 h-4" />
-                    </a>
-                  </div>
+              <div className="h-96 relative">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5!2d5.62!3d6.38!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjInNDguMCJOIDXCsDM3JzEyLjAiRQ!5e0!3m2!1sen!2sng!4v1234567890!5m2!1sen!2sng&q=16+Irabor+Street+off+Ewan+Street+Upper+Mission+Extension+Uteh+Benin+City"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <MapPin className="w-5 h-5 text-primary" />
+                  <h3 className="text-xl font-bold text-dark">
+                    Find Us Here
+                  </h3>
                 </div>
+                <p className="text-gray-600">
+                  16 Irabor Street off Ewan Street
+                </p>
+                <p className="text-gray-600">
+                  Upper Mission Extension, Uteh, Benin City, Edo State, Nigeria
+                </p>
+                <a
+                  href="https://www.google.com/maps/search/16+Irabor+Street+off+Ewan+Street+Upper+Mission+Extension+Uteh+Benin+City"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-4 text-primary font-semibold hover:text-primary-dark transition-colors"
+                >
+                  Open in Google Maps
+                  <ArrowRight className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </FadeIn>
