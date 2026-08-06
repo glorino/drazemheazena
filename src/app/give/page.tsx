@@ -29,6 +29,23 @@ import {
 } from "@/components/Animations";
 import { useState } from "react";
 
+const bankAccounts = [
+  {
+    category: "Tithes & Offerings",
+    bank: "Zenith Bank",
+    accountName: "turning point gospel center",
+    accountNumber: "1311177696",
+    color: "primary",
+  },
+  {
+    category: "Project Donations",
+    bank: "Moniepoint Bank",
+    accountName: "THE CHAMPIONS MULTI PROJECTS LTD – TURNING POINT CENTRE",
+    accountNumber: "5205708798",
+    color: "gold",
+  },
+];
+
 const givingOptions = [
   {
     icon: Heart,
@@ -246,159 +263,63 @@ export default function GivePage() {
           </FadeIn>
 
           <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <StaggerItem>
-              <div className="bg-cream rounded-2xl p-8 border border-cream-dark">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-xl font-bold text-dark">
-                    First Bank Nigeria
-                  </h3>
-                  <CreditCard className="w-8 h-8 text-primary" />
-                </div>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-500 text-sm">Account Name:</span>
-                    <span className="font-semibold text-dark">
-                      Turning Point Gospel Center
+            {bankAccounts.map((account) => (
+              <StaggerItem key={account.bank}>
+                <div className="bg-cream rounded-2xl p-8 border border-cream-dark relative overflow-hidden">
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm">
+                        <Building className="w-6 h-6 text-dark" />
+                      </div>
+                      <h3 className="text-lg font-bold text-dark uppercase tracking-wide">
+                        {account.category}
+                      </h3>
+                    </div>
+                    <span className="bg-dark text-white text-xs font-bold px-4 py-2 rounded-full uppercase">
+                      {account.bank}
                     </span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-500 text-sm">Account Number:</span>
-                    <div className="flex items-center gap-2">
-                      <span className="font-mono font-bold text-dark">
-                        XXXXXXXXXX
+                  <div className="border-t border-cream-dark pt-6">
+                    <div className="mb-4">
+                      <span className="text-gray-500 text-xs uppercase tracking-wider">
+                        Account Name
                       </span>
+                      <p className="font-semibold text-dark text-lg mt-1">
+                        {account.accountName}
+                      </p>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <div>
+                        <span className="text-gray-500 text-xs uppercase tracking-wider">
+                          Account Number
+                        </span>
+                        <p className="font-mono font-bold text-dark text-xl mt-1">
+                          {account.accountNumber}
+                        </p>
+                      </div>
                       <button
                         onClick={() =>
-                          copyToClipboard("XXXXXXXXXX", "firstbank")
+                          copyToClipboard(account.accountNumber, account.bank)
                         }
-                        className="p-1 rounded hover:bg-primary/10 transition-colors"
+                        className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                       >
-                        {copiedAccount === "firstbank" ? (
-                          <Check className="w-4 h-4 text-green-500" />
+                        {copiedAccount === account.bank ? (
+                          <>
+                            <Check className="w-4 h-4 text-green-500" />
+                            <span className="text-sm text-green-500">Copied!</span>
+                          </>
                         ) : (
-                          <Copy className="w-4 h-4 text-gray-400" />
+                          <>
+                            <Copy className="w-4 h-4 text-gray-400" />
+                            <span className="text-sm text-gray-500">Copy</span>
+                          </>
                         )}
                       </button>
                     </div>
                   </div>
                 </div>
-              </div>
-            </StaggerItem>
-
-            <StaggerItem>
-              <div className="bg-cream rounded-2xl p-8 border border-cream-dark">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-xl font-bold text-dark">
-                    Guaranty Trust Bank
-                  </h3>
-                  <CreditCard className="w-8 h-8 text-primary" />
-                </div>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-500 text-sm">Account Name:</span>
-                    <span className="font-semibold text-dark">
-                      Turning Point Gospel Center
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-500 text-sm">Account Number:</span>
-                    <div className="flex items-center gap-2">
-                      <span className="font-mono font-bold text-dark">
-                        XXXXXXXXXX
-                      </span>
-                      <button
-                        onClick={() =>
-                          copyToClipboard("XXXXXXXXXX", "gtbank")
-                        }
-                        className="p-1 rounded hover:bg-primary/10 transition-colors"
-                      >
-                        {copiedAccount === "gtbank" ? (
-                          <Check className="w-4 h-4 text-green-500" />
-                        ) : (
-                          <Copy className="w-4 h-4 text-gray-400" />
-                        )}
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </StaggerItem>
-
-            <StaggerItem>
-              <div className="bg-cream rounded-2xl p-8 border border-cream-dark">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-xl font-bold text-dark">
-                    Access Bank Nigeria
-                  </h3>
-                  <CreditCard className="w-8 h-8 text-primary" />
-                </div>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-500 text-sm">Account Name:</span>
-                    <span className="font-semibold text-dark">
-                      WAATPF Foundation
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-500 text-sm">Account Number:</span>
-                    <div className="flex items-center gap-2">
-                      <span className="font-mono font-bold text-dark">
-                        XXXXXXXXXX
-                      </span>
-                      <button
-                        onClick={() =>
-                          copyToClipboard("XXXXXXXXXX", "access")
-                        }
-                        className="p-1 rounded hover:bg-primary/10 transition-colors"
-                      >
-                        {copiedAccount === "access" ? (
-                          <Check className="w-4 h-4 text-green-500" />
-                        ) : (
-                          <Copy className="w-4 h-4 text-gray-400" />
-                        )}
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </StaggerItem>
-
-            <StaggerItem>
-              <div className="bg-cream rounded-2xl p-8 border border-cream-dark">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-xl font-bold text-dark">OPay / PalmPay</h3>
-                  <CreditCard className="w-8 h-8 text-primary" />
-                </div>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-500 text-sm">Account Name:</span>
-                    <span className="font-semibold text-dark">
-                      Turning Point Gospel Center
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-500 text-sm">Account Number:</span>
-                    <div className="flex items-center gap-2">
-                      <span className="font-mono font-bold text-dark">
-                        XXXXXXXXXX
-                      </span>
-                      <button
-                        onClick={() =>
-                          copyToClipboard("XXXXXXXXXX", "opay")
-                        }
-                        className="p-1 rounded hover:bg-primary/10 transition-colors"
-                      >
-                        {copiedAccount === "opay" ? (
-                          <Check className="w-4 h-4 text-green-500" />
-                        ) : (
-                          <Copy className="w-4 h-4 text-gray-400" />
-                        )}
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </StaggerItem>
+              </StaggerItem>
+            ))}
           </StaggerChildren>
         </div>
       </section>
