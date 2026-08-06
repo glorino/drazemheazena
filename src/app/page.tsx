@@ -44,7 +44,7 @@ const stats = [
 const features = [
   {
     icon: BookOpen,
-    title: "Bible Study",
+    title: "Calvary Experience",
     description:
       "Deep dive into God's Word with structured study groups, personal devotion guides, and life-changing teachings that illuminate scripture for everyday living.",
     color: "primary",
@@ -101,30 +101,44 @@ const testimonials = [
 
 const events = [
   {
-    title: "Sunday Celebration Service",
+    title: "Turning Point Service",
     date: "Every Sunday",
-    time: "8:00 AM & 10:30 AM",
+    time: "7:00 AM – 9:30 AM",
     location: "Main Auditorium",
     tag: "Weekly",
   },
   {
-    title: "Midweek Bible Study",
+    title: "Calvary Experience",
     date: "Every Wednesday",
-    time: "6:00 PM",
+    time: "4:00 PM – 6:00 PM",
     location: "Main Auditorium",
     tag: "Weekly",
   },
   {
-    title: "Power Night Prayer",
-    date: "Every Friday",
-    time: "7:00 PM",
+    title: "Living Water Service",
+    date: "First Sunday of Month",
+    time: "7:00 AM",
+    location: "Main Auditorium",
+    tag: "Monthly",
+  },
+  {
+    title: "Three Nights of Answers",
+    date: "Every 3rd Wed/Thu/Fri",
+    time: "10:00 PM",
+    location: "Main Auditorium",
+    tag: "Special",
+  },
+  {
+    title: "Counselling Hours",
+    date: "Monday – Tuesday",
+    time: "7:00 AM – 10:00 AM",
     location: "Main Auditorium",
     tag: "Weekly",
   },
   {
-    title: "Monthly Healing Service",
-    date: "First Saturday of Month",
-    time: "8:00 AM",
+    title: "I Must Marry Well",
+    date: "First Monday of Month",
+    time: "3:00 PM",
     location: "Main Auditorium",
     tag: "Monthly",
   },
@@ -135,7 +149,7 @@ function getNextSunday(): string {
   const daysUntilSunday = (7 - now.getDay()) % 7 || 7;
   const nextSunday = new Date(now);
   nextSunday.setDate(now.getDate() + daysUntilSunday);
-  nextSunday.setHours(8, 0, 0, 0);
+  nextSunday.setHours(7, 0, 0, 0);
   return nextSunday.toISOString();
 }
 
@@ -504,10 +518,10 @@ export default function HomePage() {
                     Next Sunday Service
                   </span>
                   <h3 className="text-2xl md:text-3xl font-bold text-white mt-4">
-                    Sunday Celebration Service
+                    Turning Point Service
                   </h3>
                   <p className="text-gray-400 mt-2">
-                    First Service: 8:00 AM | Second Service: 10:30 AM
+                    Every Sunday: 7:00 AM – 9:30 AM
                   </p>
                 </div>
                 <div className="flex justify-center">

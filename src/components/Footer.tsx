@@ -230,24 +230,27 @@ export default function Footer() {
             </h4>
             <div className="space-y-4">
               <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                <h5 className="text-gold font-semibold mb-2">Sunday Service</h5>
+                <h5 className="text-gold font-semibold mb-2">Turning Point Service</h5>
                 <p className="text-gray-400 text-sm">
-                  First Service: 8:00 AM
-                </p>
-                <p className="text-gray-400 text-sm">
-                  Second Service: 10:30 AM
+                  Every Sunday: 7:00 AM – 9:30 AM
                 </p>
               </div>
               <div className="bg-white/5 rounded-xl p-4 border border-white/10">
                 <h5 className="text-gold font-semibold mb-2">
-                  Wednesday Service
+                  Calvary Experience
                 </h5>
-                <p className="text-gray-400 text-sm">Bible Study: 6:00 PM</p>
+                <p className="text-gray-400 text-sm">Every Wednesday: 4:00 PM – 6:00 PM</p>
               </div>
               <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                <h5 className="text-gold font-semibold mb-2">Friday Service</h5>
+                <h5 className="text-gold font-semibold mb-2">Counselling Hours</h5>
                 <p className="text-gray-400 text-sm">
-                  Power Night: 7:00 PM
+                  Monday – Tuesday: 7:00 AM – 10:00 AM
+                </p>
+              </div>
+              <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                <h5 className="text-gold font-semibold mb-2">TP Hebrew Women Hours</h5>
+                <p className="text-gray-400 text-sm">
+                  Every Monday: 9:00 AM – 12:00 PM
                 </p>
               </div>
             </div>

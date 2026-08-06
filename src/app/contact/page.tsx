@@ -31,25 +31,22 @@ import { useState } from "react";
 const serviceTimes = [
   {
     day: "Sunday",
-    services: [
-      { name: "First Service", time: "8:00 AM" },
-      { name: "Second Service", time: "10:30 AM" },
-    ],
+    services: [{ name: "Turning Point Service", time: "7:00 AM – 9:30 AM" }],
     highlight: true,
   },
   {
     day: "Wednesday",
-    services: [{ name: "Bible Study", time: "6:00 PM" }],
+    services: [{ name: "Calvary Experience", time: "4:00 PM – 6:00 PM" }],
     highlight: false,
   },
   {
-    day: "Friday",
-    services: [{ name: "Power Night Prayer", time: "7:00 PM" }],
+    day: "Monday – Tuesday",
+    services: [{ name: "Counselling Hours", time: "7:00 AM – 10:00 AM" }],
     highlight: false,
   },
   {
-    day: "Saturday",
-    services: [{ name: "Youth Ministry", time: "3:00 PM" }],
+    day: "Monday",
+    services: [{ name: "TP Hebrew Women Hours", time: "9:00 AM – 12:00 PM" }],
     highlight: false,
   },
 ];
