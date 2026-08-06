@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     "prayer",
     "faith",
   ],
+  icons: {
+    icon: "/logo.png",
+  },
   openGraph: {
     title: "Turning Point Gospel Center International",
     description:
