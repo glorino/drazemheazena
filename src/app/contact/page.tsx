@@ -451,7 +451,7 @@ export default function ContactPage() {
                   Upper Mission Extension, Uteh, Benin City, Edo State, Nigeria
                 </p>
                 <a
-                  href="https://www.google.com/maps/dir/?api=1&destination=16+Irabor+Street+off+Ewan+Street+Upper+Mission+Extension+Uteh+Benin+City+Nigeria"
+                  href="https://www.google.com/maps/search/?api=1&query=Upper+Mission+Extension+Uteh+Benin+City+Edo+Nigeria"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 mt-4 text-primary font-semibold hover:text-primary-dark transition-colors"

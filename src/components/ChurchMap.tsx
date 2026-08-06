@@ -14,8 +14,8 @@ export default function ChurchMap() {
 
       await import("leaflet/dist/leaflet.css");
 
-      const churchLat = 6.3375;
-      const churchLng = 5.6098;
+      const churchLat = 6.3837;
+      const churchLng = 5.6128;
 
       const map = L.map(mapRef.current!, {
         center: [churchLat, churchLng],
