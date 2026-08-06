@@ -130,27 +130,12 @@ export default function Footer() {
           {/* Church Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center">
-                <svg
-                  viewBox="0 0 40 40"
-                  className="w-7 h-7"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M20 4L20 36M12 12L28 12M10 20L30 20"
-                    stroke="white"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                  />
-                  <circle cx="20" cy="8" r="3" fill="#D4A843" />
-                  <path
-                    d="M16 28C16 28 18 32 20 34C22 32 24 28 24 28"
-                    stroke="#D4A843"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                </svg>
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-gold/30">
+                <img
+                  src="/logo.png"
+                  alt="Turning Point Gospel Center International"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <h4 className="text-lg font-bold text-white">Turning Point</h4>

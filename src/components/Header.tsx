@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Menu,
@@ -79,27 +80,14 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative">
-                <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <svg
-                    viewBox="0 0 40 40"
-                    className="w-8 h-8"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M20 4L20 36M12 12L28 12M10 20L30 20"
-                      stroke="white"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                    />
-                    <circle cx="20" cy="8" r="3" fill="#D4A843" />
-                    <path
-                      d="M16 28C16 28 18 32 20 34C22 32 24 28 24 28"
-                      stroke="#D4A843"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                  </svg>
+                <div className="w-14 h-14 rounded-full overflow-hidden group-hover:scale-110 transition-transform duration-300 border-2 border-gold/30">
+                  <Image
+                    src="/logo.png"
+                    alt="Turning Point Gospel Center International"
+                    width={56}
+                    height={56}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-gold rounded-full animate-glow" />
               </div>
