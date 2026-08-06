@@ -438,20 +438,19 @@ export default function ContactPage() {
                 <ChurchMap />
               </div>
               <div className="p-6 text-center">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <MapPin className="w-5 h-5 text-primary" />
-                  <h3 className="text-xl font-bold text-dark">
-                    Find Us Here
+                <div className="bg-primary text-white py-3 px-6 rounded-xl mb-4 inline-block">
+                  <h3 className="text-xl font-bold">
+                    Turning Point Gospel Center Int&apos;l
                   </h3>
                 </div>
-                <p className="text-gray-600">
-                  16 Irabor Street off Ewan Street
+                <p className="text-gray-700 font-semibold">
+                  No. 16 Irabor Street off Ewan Street
                 </p>
-                <p className="text-gray-600">
+                <p className="text-gray-700 font-semibold">
                   Upper Mission Extension, Uteh, Benin City, Edo State, Nigeria
                 </p>
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=Upper+Mission+Extension+Uteh+Benin+City+Edo+Nigeria"
+                  href="https://www.google.com/maps/dir/?api=1&destination=6.3798,5.6658"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 mt-4 text-primary font-semibold hover:text-primary-dark transition-colors"
