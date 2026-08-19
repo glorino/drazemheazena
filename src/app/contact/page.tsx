@@ -7,12 +7,13 @@ import {
   Phone,
   Mail,
   MapPin,
-  Clock,
   Send,
   MessageSquare,
   ArrowRight,
   CheckCircle2,
   Sparkles,
+  Calendar,
+  Globe,
 } from "lucide-react";
 import {
   FacebookIcon,
@@ -22,7 +23,6 @@ import {
 } from "@/components/SocialIcons";
 import {
   FadeIn,
-  ScaleIn,
   StaggerChildren,
   StaggerItem,
 } from "@/components/Animations";
@@ -38,33 +38,10 @@ const ChurchMap = dynamic(() => import("@/components/ChurchMap"), {
   ),
 });
 
-const serviceTimes = [
-  {
-    day: "Sunday",
-    services: [{ name: "Turning Point Service", time: "7:00 AM – 9:30 AM" }],
-    highlight: true,
-  },
-  {
-    day: "Wednesday",
-    services: [{ name: "Calvary Experience", time: "4:00 PM – 6:00 PM" }],
-    highlight: false,
-  },
-  {
-    day: "Monday – Tuesday",
-    services: [{ name: "Counselling Hours", time: "7:00 AM – 10:00 AM" }],
-    highlight: false,
-  },
-  {
-    day: "Monday",
-    services: [{ name: "TP Hebrew Women Hours", time: "9:00 AM – 12:00 PM" }],
-    highlight: false,
-  },
-];
-
 const contactInfo = [
   {
     icon: MapPin,
-    title: "Address",
+    title: "Location",
     details: [
       "16 Irabor Street off Ewan Street",
       "Upper Mission Extension, Uteh, Benin City, Edo State, Nigeria",
@@ -80,9 +57,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: [
-      "support@turningpointgospelcentre.com",
-    ],
+    details: ["support@turningpointgospelcentre.com"],
     link: "mailto:support@turningpointgospelcentre.com",
   },
 ];
@@ -172,9 +147,9 @@ export default function ContactPage() {
               Get in <span className="text-gradient">Touch</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl leading-relaxed">
-              Whether you have a question, need prayer, want to book Dr. Azemhe
-              Azena for a speaking engagement, or want to visit a service, we
-              are here for you.
+              Whether you have a question, want to book Dr. Azemhe Azena for a
+              speaking engagement, inquire about partnership, or simply want to
+              connect — we are here for you.
             </p>
           </FadeIn>
         </div>
@@ -191,7 +166,7 @@ export default function ContactPage() {
                   <div className="flex items-center gap-3 mb-8">
                     <MessageSquare className="w-6 h-6 text-primary" />
                     <h2 className="text-2xl font-bold text-dark">
-                      Send Us a Message
+                      Send a Message
                     </h2>
                   </div>
 
@@ -270,11 +245,11 @@ export default function ContactPage() {
                           className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white"
                         >
                           <option value="">Select a subject</option>
-                          <option value="prayer">Prayer Request</option>
                           <option value="speaking">Speaking Engagement</option>
                           <option value="ministry">Ministry Inquiry</option>
                           <option value="media">Media & Interviews</option>
                           <option value="partnership">Partnership</option>
+                          <option value="prayer">Prayer Request</option>
                           <option value="counseling">Pastoral Counseling</option>
                           <option value="other">Other</option>
                         </select>
@@ -296,7 +271,13 @@ export default function ContactPage() {
                       />
                     </div>
                     {submitMessage && (
-                      <div className={`p-4 rounded-xl text-sm font-medium ${isSubmitted ? "bg-green-50 text-green-700 border border-green-200" : "bg-red-50 text-red-700 border border-red-200"}`}>
+                      <div
+                        className={`p-4 rounded-xl text-sm font-medium ${
+                          isSubmitted
+                            ? "bg-green-50 text-green-700 border border-green-200"
+                            : "bg-red-50 text-red-700 border border-red-200"
+                        }`}
+                      >
                         {submitMessage}
                       </div>
                     )}
@@ -327,7 +308,9 @@ export default function ContactPage() {
                       <a
                         key={info.title}
                         href={info.link}
-                        target={info.link.startsWith("http") ? "_blank" : undefined}
+                        target={
+                          info.link.startsWith("http") ? "_blank" : undefined
+                        }
                         rel={
                           info.link.startsWith("http")
                             ? "noopener noreferrer"
@@ -357,55 +340,7 @@ export default function ContactPage() {
               <FadeIn direction="right" delay={0.3}>
                 <div className="bg-white rounded-2xl shadow-xl p-8">
                   <h3 className="text-xl font-bold text-dark mb-6">
-                    Service Times
-                  </h3>
-                  <div className="space-y-4">
-                    {serviceTimes.map((schedule) => (
-                      <div
-                        key={schedule.day}
-                        className={`rounded-xl p-4 ${
-                          schedule.highlight
-                            ? "bg-primary/10 border border-primary/20"
-                            : "bg-cream"
-                        }`}
-                      >
-                        <div className="flex items-center justify-between mb-2">
-                          <span
-                            className={`font-bold ${
-                              schedule.highlight ? "text-primary" : "text-dark"
-                            }`}
-                          >
-                            {schedule.day}
-                          </span>
-                          {schedule.highlight && (
-                            <span className="text-xs bg-primary text-white px-2 py-0.5 rounded-full">
-                              Today
-                            </span>
-                          )}
-                        </div>
-                        {schedule.services.map((service) => (
-                          <div
-                            key={service.name}
-                            className="flex items-center justify-between text-sm"
-                          >
-                            <span className="text-gray-600">
-                              {service.name}
-                            </span>
-                            <span className="text-dark font-medium">
-                              {service.time}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </FadeIn>
-
-              <FadeIn direction="right" delay={0.4}>
-                <div className="bg-white rounded-2xl shadow-xl p-8">
-                  <h3 className="text-xl font-bold text-dark mb-6">
-                    Follow Us
+                    Follow Dr. Azena
                   </h3>
                   <div className="grid grid-cols-2 gap-4">
                     {socialLinks.map((social) => (
@@ -425,6 +360,25 @@ export default function ContactPage() {
                   </div>
                 </div>
               </FadeIn>
+
+              <FadeIn direction="right" delay={0.4}>
+                <div className="bg-gradient-to-br from-primary to-primary-dark rounded-2xl shadow-xl p-8 text-white">
+                  <h3 className="text-xl font-bold mb-4">
+                    Quick Connect
+                  </h3>
+                  <p className="text-white/80 text-sm mb-6">
+                    For urgent inquiries or speaking engagement requests, reach
+                    out directly.
+                  </p>
+                  <a
+                    href="tel:08107659761"
+                    className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded-full font-semibold hover:bg-white/30 transition-all duration-300"
+                  >
+                    <Phone className="w-4 h-4" />
+                    Call Now
+                  </a>
+                </div>
+              </FadeIn>
             </div>
           </div>
         </div>
@@ -440,9 +394,7 @@ export default function ContactPage() {
               </div>
               <div className="p-6 text-center">
                 <div className="bg-primary text-white py-3 px-6 rounded-xl mb-4 inline-block">
-                  <h3 className="text-xl font-bold">
-                    Dr. Azemhe Azena
-                  </h3>
+                  <h3 className="text-xl font-bold">Dr. Azemhe Azena</h3>
                 </div>
                 <p className="text-gray-700 font-semibold">
                   No. 16 Irabor Street off Ewan Street

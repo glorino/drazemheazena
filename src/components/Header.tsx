@@ -18,16 +18,15 @@ const navLinks = [
   { href: "/", label: "Home" },
   {
     href: "/about",
-    label: "About Dr. Azemhe",
+    label: "About",
     children: [
       { href: "/about#pastor", label: "Biography" },
-      { href: "/about#history", label: "Ministry Journey" },
+      { href: "/about#history", label: "Journey" },
       { href: "/about#vision", label: "Vision & Mission" },
     ],
   },
   { href: "/ministries", label: "Ministry" },
   { href: "/sermons", label: "Media" },
-  { href: "/events", label: "Events" },
   { href: "/contact", label: "Contact" },
 ];
 

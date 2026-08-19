@@ -2,53 +2,88 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import {
   Globe,
   BookMarked,
   Heart,
-  Users,
   Award,
-  Star,
   ArrowRight,
   Cross,
   Compass,
   BookOpen,
-  Crown,
   Shield,
-  Mail,
+  Users,
+  Star,
+  GraduationCap,
+  Landmark,
+  HandHelping,
+  Crown,
 } from "lucide-react";
 import {
   FadeIn,
-  ScaleIn,
   StaggerChildren,
   StaggerItem,
 } from "@/components/Animations";
 
 const timeline = [
   {
-    year: "2008",
-    title: "Ministry Beginnings",
+    year: "1979",
+    title: "Born in Okpella",
     description:
-      "Dr. Azemhe Azena began his pastoral journey at Omega Fire Ministries, where he served faithfully for 18 years, touching countless lives across Nigeria and beyond.",
+      "Born in Okpella, Edo State, Nigeria. Raised in a environment that shaped his values of faith, hard work and service to others.",
+  },
+  {
+    year: "2007",
+    title: "Ministry Begins",
+    description:
+      "Joined Omega Fire Ministries as a pastor, beginning a journey of pastoral leadership that would span nearly two decades.",
   },
   {
     year: "2015",
     title: "Global Crusades",
     description:
-      "Expanded ministry to international crusades and conferences, traveling to over 65 countries to preach the Gospel and witness miraculous healings and transformations.",
+      "Expanded ministry to international crusades and conferences, traveling to over 65 countries to preach the Gospel.",
   },
   {
     year: "2020",
     title: "Literary Ministry",
     description:
-      "Published over 14 books on faith, healing, deliverance, and spiritual growth, becoming a bestselling Christian author and trusted voice in theological teaching.",
+      "Published over 14 books on faith, healing, deliverance and spiritual growth, becoming a bestselling Christian author.",
+  },
+  {
+    year: "2024",
+    title: "Public Leadership",
+    description:
+      "Emerged as the NNPP Governorship Candidate for Edo State, campaigning on good governance, education and youth empowerment.",
   },
   {
     year: "2026",
-    title: "Turning Point Founded",
+    title: "Turning Point",
     description:
-      "Established Turning Point Gospel Center International with a vision to raise a generation of believers who are agents of transformation in their sphere of influence.",
+      "Established Turning Point Gospel Centre International, a new expression of his Christian ministry and service.",
+  },
+];
+
+const education = [
+  {
+    institution: "Federal Polytechnic, Auchi",
+    field: "Mass Communication",
+    icon: GraduationCap,
+  },
+  {
+    institution: "Omega Bible Institute",
+    field: "Theology",
+    icon: BookOpen,
+  },
+  {
+    institution: "Bethel University College of Biblical Studies",
+    field: "Religious Studies & Christian Philosophy",
+    icon: BookMarked,
+  },
+  {
+    institution: "Ambrose Alli University, Ekpoma",
+    field: "Law",
+    icon: Shield,
   },
 ];
 
@@ -57,72 +92,57 @@ const values = [
     icon: Cross,
     title: "Unwavering Faith",
     description:
-      "We stand firm on the Word of God, believing in the supernatural power of faith to transform every situation.",
+      "Standing firm on the Word of God, believing in the supernatural power of faith to transform every situation.",
     color: "from-primary to-primary-dark",
   },
   {
     icon: Heart,
     title: "Genuine Love",
     description:
-      "We demonstrate Christ's love through authentic relationships, compassionate service, and genuine care for one another.",
+      "Demonstrating Christ's love through authentic relationships, compassionate service and genuine care for people.",
     color: "from-pink-500 to-rose-600",
   },
   {
     icon: Globe,
     title: "Global Vision",
     description:
-      "We are committed to spreading the Gospel to every nation, tribe, and tongue, fulfilling the Great Commission.",
+      "Committed to spreading the Gospel to every nation, tribe and tongue, fulfilling the Great Commission.",
     color: "from-blue-500 to-indigo-600",
   },
   {
     icon: Shield,
     title: "Integrity",
     description:
-      "We uphold the highest standards of honesty, accountability, and moral excellence in all our dealings.",
+      "Upholding the highest standards of honesty, accountability and moral excellence in all endeavors.",
     color: "from-emerald-500 to-green-600",
   },
   {
     icon: BookOpen,
     title: "Biblical Excellence",
     description:
-      "We are committed to the undiluted Word of God, teaching and applying Scripture with precision and power.",
+      "Committed to the undiluted Word of God, teaching and applying Scripture with precision and power.",
     color: "from-gold to-gold-light",
   },
   {
     icon: Users,
-    title: "Community",
+    title: "Servant Leadership",
     description:
-      "We build a loving family where every person is valued, supported, and empowered to fulfill their God-given purpose.",
+      "Leading by serving, following the example of Christ who came not to be served but to serve.",
     color: "from-purple-500 to-violet-600",
   },
   {
     icon: Star,
-    title: "Servant Leadership",
+    title: "Lifelong Learning",
     description:
-      "We lead by serving, following the example of Christ who came not to be served but to serve.",
+      "A commitment to continuous academic and personal development, even after establishing himself as a leader.",
     color: "from-amber-500 to-orange-600",
   },
   {
     icon: Crown,
     title: "Kingdom Impact",
     description:
-      "We are dedicated to making a lasting impact in our communities, nation, and the world through practical Christianity.",
+      "Dedicated to making a lasting impact in communities, nation and the world through practical Christianity.",
     color: "from-cyan-500 to-teal-600",
-  },
-];
-
-const leadership = [
-  {
-    name: "Dr. Azemhe Azena PhD",
-    role: "Senior Pastor & Visionary",
-    bio: "A seasoned pastor, author, and global evangelist with over 18 years of ministry experience. He has traveled to more than 65 countries, authored 14+ books, and is the President of the William Azemhe Azena Turning Point Foundation.",
-    image: "/IMG-20260802-WA0135.jpg.jpeg",
-  },
-  {
-    name: "Pastor Mrs. Uwazota Precious",
-    role: "Co-Pastor & First Lady",
-    bio: "A pillar of strength and grace, Pastor Mrs. Uwazota Precious supports the vision of Turning Point Gospel Center with her unwavering faith, leadership in the women's ministry, and dedication to nurturing the congregation.",
-    image: "/IMG-20260802-WA0134.jpg.jpeg",
   },
 ];
 
@@ -159,85 +179,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Ministry Journey */}
-      <section id="history" className="py-24 bg-cream">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <FadeIn direction="left">
-              <div>
-                <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
-                  Ministry Journey
-                </span>
-                <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6 leading-tight">
-                  A Journey of{" "}
-                  <span className="text-gradient">Faith & Service</span>
-                </h2>
-                <div className="space-y-6 text-gray-600 leading-relaxed">
-                  <p>
-                    Dr. Azemhe Azena's ministry journey began in 2007 when he
-                    joined Omega Fire Ministries as a pastor. Over the years, he
-                    developed through different levels of pastoral leadership
-                    and became associated with senior responsibilities within
-                    the ministry.
-                  </p>
-                  <p>
-                    His years in ministry shaped his understanding of people,
-                    leadership, communication, responsibility and service.
-                    Through preaching, teaching, counselling, prayer, evangelism
-                    and mentorship, he developed a public ministry focused on
-                    influencing lives through the Christian faith.
-                  </p>
-                  <p>
-                    In 2026, another important chapter began with the emergence
-                    of Turning Point Gospel Centre International. The ministry
-                    represents a new expression of his Christian service and is
-                    associated with the leadership of Dr. Azemhe Azena and
-                    Pastor Precious Azemhe Azena.
-                  </p>
-                </div>
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="right">
-              <div className="relative">
-                <div className="bg-white rounded-2xl shadow-xl p-8">
-                  <h3 className="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
-                    <BookOpen className="w-6 h-6 text-primary" />
-                    Ministry Timeline
-                  </h3>
-                  <div className="space-y-8">
-                    {timeline.map((item, index) => (
-                      <div key={item.year} className="flex gap-4">
-                        <div className="flex flex-col items-center">
-                          <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center text-white text-sm font-bold">
-                            {item.year.slice(-2)}
-                          </div>
-                          {index < timeline.length - 1 && (
-                            <div className="w-0.5 flex-1 bg-primary/20 mt-2" />
-                          )}
-                        </div>
-                        <div className="pb-4">
-                          <span className="text-primary font-semibold text-sm">
-                            {item.year}
-                          </span>
-                          <h4 className="text-lg font-bold text-dark mt-1">
-                            {item.title}
-                          </h4>
-                          <p className="text-gray-600 text-sm mt-1 leading-relaxed">
-                            {item.description}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* Biography */}
+      {/* Full Biography */}
       <section id="pastor" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -246,7 +188,7 @@ export default function AboutPage() {
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src="/IMG-20260802-WA0133.jpg.jpeg"
-                    alt="Dr. Azemhe Azena in his office"
+                    alt="Dr. Azemhe Azena"
                     width={600}
                     height={700}
                     className="object-cover w-full h-[600px]"
@@ -258,7 +200,7 @@ export default function AboutPage() {
                     <span className="font-bold text-dark">Dr. Azemhe Azena</span>
                   </div>
                   <p className="text-sm text-gray-600">
-                    PhD holder, Global Evangelist, Bestselling Author
+                    Minister, Author, Entrepreneur, Public Leader
                   </p>
                 </div>
               </div>
@@ -267,29 +209,38 @@ export default function AboutPage() {
             <FadeIn direction="right">
               <div>
                 <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
-                  Biography
+                  The Story
                 </span>
                 <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6 leading-tight">
                   Dr. Azemhe Azena <span className="text-gradient">PhD</span>
                 </h2>
                 <div className="space-y-4 text-gray-600 leading-relaxed mb-8">
                   <p>
-                    Born in 1979 in Okpella, Edo State, Nigeria, Dr. Azemhe
-                    Azena is a seasoned pastor, global evangelist, author, and
-                    philanthropist whose ministry has impacted millions across
-                    the world.
+                    Dr. Azemhe Azena is a Christian minister, teacher,
+                    entrepreneur, educationist, family man and public leader
+                    whose life has developed through a continuing journey of
+                    faith, learning, service and leadership.
                   </p>
                   <p>
-                    With a Doctorate in Philosophy (PhD), Dr. Azena combines
-                    scholarly depth with apostolic fire, delivering God&apos;s
-                    Word with clarity, power, and transformative insight. His
-                    teaching ministry has been a beacon of hope to the nations,
-                    drawing souls into a deeper relationship with Christ.
+                    Rooted in Edo State, his story is one of personal
+                    development and expanding responsibility. His early life and
+                    educational experiences provided the foundation for a journey
+                    that would eventually span Christian ministry, academia,
+                    entrepreneurship, education, humanitarian service and public
+                    leadership.
+                  </p>
+                  <p>
+                    His commitment to education has remained a recurring feature
+                    of his life. His academic journey includes studies in Mass
+                    Communication, Theology, Religious Studies, Christian
+                    Philosophy and Law — demonstrating his commitment to lifelong
+                    learning even after establishing himself as a pastor,
+                    entrepreneur and public figure.
                   </p>
                   <p>
                     Over his 18-year ministry journey, Dr. Azena has traveled to
                     more than 65 countries, held numerous crusades and
-                    conferences, and witnessed countless healings, deliverances,
+                    conferences, and witnessed countless healings, deliverances
                     and life-changing testimonies. He has authored 14+ books that
                     have blessed readers worldwide.
                   </p>
@@ -297,7 +248,7 @@ export default function AboutPage() {
                     Beyond the pulpit, Dr. Azena is the President of the William
                     Azemhe Azena Turning Point Foundation, a humanitarian
                     organization dedicated to uplifting communities through
-                    education, healthcare, and social empowerment programs.
+                    education, healthcare and social empowerment programs.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-4 mb-8">
@@ -326,6 +277,103 @@ export default function AboutPage() {
               </div>
             </FadeIn>
           </div>
+        </div>
+      </section>
+
+      {/* Journey Timeline */}
+      <section id="history" className="py-24 bg-cream">
+        <div className="max-w-7xl mx-auto px-4">
+          <FadeIn direction="up">
+            <div className="text-center mb-16">
+              <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
+                The Journey
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
+                Life <span className="text-gradient">Milestones</span>
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                From early life in Edo State to global ministry, education,
+                entrepreneurship and public leadership.
+              </p>
+            </div>
+          </FadeIn>
+
+          <div className="relative max-w-4xl mx-auto">
+            <div className="absolute left-8 md:left-1/2 -translate-x-px h-full w-0.5 bg-gradient-to-b from-primary via-gold to-purple" />
+            <div className="space-y-12">
+              {timeline.map((item, index) => (
+                <FadeIn
+                  key={item.year}
+                  direction={index % 2 === 0 ? "left" : "right"}
+                  delay={index * 0.1}
+                >
+                  <div
+                    className={`flex items-center gap-8 ${
+                      index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                    }`}
+                  >
+                    <div
+                      className={`flex-1 ${
+                        index % 2 === 0 ? "text-right" : "text-left"
+                      }`}
+                    >
+                      <div className="bg-white rounded-2xl shadow-lg p-6 inline-block">
+                        <span className="text-primary font-bold text-lg">
+                          {item.year}
+                        </span>
+                        <h3 className="text-xl font-bold text-dark mt-1">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-600 mt-1">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="w-4 h-4 bg-primary rounded-full border-4 border-cream shrink-0 z-10" />
+                    <div className="flex-1" />
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Education */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <FadeIn direction="up">
+            <div className="text-center mb-16">
+              <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
+                Education
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
+                Academic <span className="text-gradient">Journey</span>
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                A commitment to lifelong learning that spans multiple
+                disciplines and institutions.
+              </p>
+            </div>
+          </FadeIn>
+
+          <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {education.map((edu) => (
+              <StaggerItem key={edu.institution}>
+                <div className="bg-cream rounded-2xl p-6 flex items-start gap-4 hover:shadow-lg transition-all duration-300">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
+                    <edu.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-dark">
+                      {edu.institution}
+                    </h3>
+                    <p className="text-gray-600 text-sm mt-1">{edu.field}</p>
+                  </div>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerChildren>
         </div>
       </section>
 
@@ -376,7 +424,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Core Values */}
+      {/* Personal Values */}
       <section className="py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn direction="up">
@@ -388,8 +436,9 @@ export default function AboutPage() {
                 Core <span className="text-gradient">Values</span>
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                These fundamental principles shape everything Dr. Azemhe Azena does
-                and define who he is as a leader, minister and servant of God.
+                These fundamental principles shape everything Dr. Azemhe Azena
+                does and define who he is as a leader, minister and servant of
+                God.
               </p>
             </div>
           </FadeIn>
@@ -400,7 +449,9 @@ export default function AboutPage() {
                 <div className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-gold/30 overflow-hidden">
                   <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary/5 to-gold/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-500" />
                   <div className="relative z-10">
-                    <div className={`w-14 h-14 bg-gradient-to-br ${value.color} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <div
+                      className={`w-14 h-14 bg-gradient-to-br ${value.color} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                    >
                       <value.icon className="w-7 h-7 text-white" />
                     </div>
                     <h4 className="text-lg font-bold text-dark mb-3 group-hover:text-primary transition-colors">
@@ -417,52 +468,62 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership */}
-      <section className="py-24 bg-cream">
+      {/* Family */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <FadeIn direction="up">
-            <div className="text-center mb-16">
-              <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
-                Leadership
-              </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
-                Led by <span className="text-gradient">God&apos;s Grace</span>
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Dr. Azemhe Azena leads with integrity, passion, and a heart
-                for transformation, alongside his wife Pastor Precious Azemhe Azena.
-              </p>
-            </div>
-          </FadeIn>
-
-          <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {leadership.map((leader) => (
-              <StaggerItem key={leader.name}>
-                <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="relative h-80">
-                    <Image
-                      src={leader.image}
-                      alt={leader.name}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <h3 className="text-2xl font-bold text-white mb-1">
-                        {leader.name}
-                      </h3>
-                      <p className="text-gold font-semibold">{leader.role}</p>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-gray-600 leading-relaxed">
-                      {leader.bio}
-                    </p>
-                  </div>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <FadeIn direction="left">
+              <div className="relative">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/IMG-20260802-WA0134.jpg.jpeg"
+                    alt="Pastor Precious Azemhe Azena"
+                    width={600}
+                    height={700}
+                    className="object-cover w-full h-[500px]"
+                  />
                 </div>
-              </StaggerItem>
-            ))}
-          </StaggerChildren>
+                <div className="absolute -bottom-8 -right-8 bg-white rounded-2xl shadow-xl p-6 max-w-xs">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Heart className="w-8 h-8 text-gold" />
+                    <span className="font-bold text-dark">Family</span>
+                  </div>
+                  <p className="text-sm text-gray-600">
+                    Married to Pastor Precious Azemhe Azena
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+
+            <FadeIn direction="right">
+              <div>
+                <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
+                  Family
+                </span>
+                <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6 leading-tight">
+                  A Life of <span className="text-gradient">Love & Partnership</span>
+                </h2>
+                <div className="space-y-4 text-gray-600 leading-relaxed">
+                  <p>
+                    Dr. Azemhe Azena is married to Pastor Precious Azemhe Azena,
+                    with whom he shares a life of family, ministry and service.
+                    Their marriage has continued through different seasons of
+                    public responsibility, and they are blessed with five
+                    children.
+                  </p>
+                  <p>
+                    Pastor Precious has also been associated with ministry
+                    leadership and educational administration, standing alongside
+                    Dr. Azena in his various endeavors.
+                  </p>
+                  <p>
+                    Their union stands as a testament to God&apos;s faithfulness
+                    and is a blessing to all who know them.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 

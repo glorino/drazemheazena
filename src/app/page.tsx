@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import {
   BookOpen,
   Heart,
@@ -15,21 +14,20 @@ import {
   Clock,
   ChevronLeft,
   ChevronRight,
-  Calendar,
-  MapPin,
   ArrowUpRight,
   Sparkles,
   Cross,
-  Church,
+  Award,
+  GraduationCap,
+  Landmark,
+  HandHelping,
 } from "lucide-react";
 import {
   FadeIn,
-  ScaleIn,
   StaggerChildren,
   StaggerItem,
   Floating,
 } from "@/components/Animations";
-import CountdownTimer from "@/components/CountdownTimer";
 import { useState, useEffect } from "react";
 
 const stats = [
@@ -44,112 +42,87 @@ const pillars = [
     icon: Cross,
     title: "Faith",
     description:
-      "Christian ministry, preaching, teaching, prayer and spiritual leadership. A life rooted in the power of God's Word and dedicated to leading others into deeper faith.",
+      "Christian ministry, preaching, teaching, prayer and spiritual leadership. A life rooted in the power of God's Word.",
     color: "primary",
   },
   {
-    icon: BookOpen,
+    icon: GraduationCap,
     title: "Education",
     description:
-      "Personal academic development spanning Mass Communication, Theology, Religious Studies, Christian Philosophy and Law. Committed to lifelong learning and educational excellence.",
+      "Studies in Mass Communication, Theology, Religious Studies, Christian Philosophy and Law. A commitment to lifelong learning.",
     color: "gold",
   },
   {
-    icon: Globe,
+    icon: Landmark,
     title: "Enterprise",
     description:
-      "Entrepreneurship across education, events, rentals, property, real estate and hospitality. Building institutions that create lasting value and opportunity.",
+      "Entrepreneurship across education, property, real estate and hospitality. Building institutions that create lasting value.",
     color: "purple",
   },
   {
-    icon: Users,
+    icon: HandHelping,
     title: "Impact",
     description:
-      "Youth empowerment, humanitarian intervention, community development, mentorship and public service through the William Azemhe Azena Turning Point Foundation.",
+      "Youth empowerment, humanitarian intervention, community development and mentorship through the William Azemhe Azena Turning Point Foundation.",
     color: "primary",
+  },
+];
+
+const milestones = [
+  {
+    year: "2007",
+    title: "Ministry Begins",
+    description: "Joined Omega Fire Ministries as a pastor",
+  },
+  {
+    year: "2015",
+    title: "Global Crusades",
+    description: "Expanded to international ministry across 65+ countries",
+  },
+  {
+    year: "2020",
+    title: "Literary Ministry",
+    description: "Published 14+ books on faith, healing and spiritual growth",
+  },
+  {
+    year: "2024",
+    title: "Public Leadership",
+    description: "NNPP Governorship Candidate for Edo State",
+  },
+  {
+    year: "2026",
+    title: "Turning Point",
+    description: "Established Turning Point Gospel Centre International",
   },
 ];
 
 const testimonials = [
   {
-    name: "Sister Grace Okonkwo",
+    name: "Grace Okonkwo",
     role: "Follower since 2019",
     text: "Dr. Azemhe Azena's teachings have transformed my walk with God and given me purpose. His ministry is a beacon of hope to our generation.",
     rating: 5,
   },
   {
-    name: "Brother Emmanuel Igbinoba",
+    name: "Emmanuel Igbinoba",
     role: "Youth Leader",
-    text: "The PATHFINDERS youth ministry under Dr. Azena's vision has helped thousands of young people discover their calling. I found my purpose through his mentorship.",
+    description: "",
+    text: "Under Dr. Azena's mentorship, thousands of young people have discovered their calling. I found my purpose through his guidance.",
     rating: 5,
   },
   {
-    name: "Deaconess Mercy Aikhionbare",
-    role: "Prayer Ministry Head",
-    text: "The anointing on Dr. Azena's life is evident in every service. I have witnessed countless healings and breakthroughs through his ministry.",
+    name: "Mercy Aikhionbare",
+    role: "Community Member",
+    text: "The anointing on Dr. Azena's life is evident in everything he does. I have witnessed countless lives transformed through his ministry.",
     rating: 5,
   },
   {
-    name: "Pastor (Mrs.) Blessing Edevbie",
+    name: "Blessing Edevbie",
     role: "Ministry Director",
     text: "In 18 years of following Dr. Azena's ministry, I have seen God's faithfulness manifest in extraordinary ways. He is a beacon of hope.",
     rating: 5,
   },
 ];
-
-const events = [
-  {
-    title: "Turning Point Service",
-    date: "Every Sunday",
-    time: "7:00 AM – 9:30 AM",
-    location: "Main Auditorium",
-    tag: "Weekly",
-  },
-  {
-    title: "Calvary Experience",
-    date: "Every Wednesday",
-    time: "4:00 PM – 6:00 PM",
-    location: "Main Auditorium",
-    tag: "Weekly",
-  },
-  {
-    title: "Living Water Service",
-    date: "First Sunday of Month",
-    time: "7:00 AM",
-    location: "Main Auditorium",
-    tag: "Monthly",
-  },
-  {
-    title: "Three Nights of Answers",
-    date: "Every 3rd Wed/Thu/Fri",
-    time: "10:00 PM",
-    location: "Main Auditorium",
-    tag: "Special",
-  },
-  {
-    title: "Counselling Hours",
-    date: "Monday – Tuesday",
-    time: "7:00 AM – 10:00 AM",
-    location: "Main Auditorium",
-    tag: "Weekly",
-  },
-  {
-    title: "I Must Marry Well",
-    date: "First Monday of Month",
-    time: "3:00 PM",
-    location: "Main Auditorium",
-    tag: "Monthly",
-  },
-];
-
-function getNextSunday(): string {
-  const now = new Date();
-  const daysUntilSunday = (7 - now.getDay()) % 7 || 7;
-  const nextSunday = new Date(now);
-  nextSunday.setDate(now.getDate() + daysUntilSunday);
-  nextSunday.setHours(7, 0, 0, 0);
-  return nextSunday.toISOString();
-}
 
 export default function HomePage() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -165,11 +138,10 @@ export default function HomePage() {
     <div className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center bg-dark overflow-hidden">
-        {/* Background Image */}
         <div className="absolute inset-0">
           <Image
             src="/DSC_3963 copy.jpg.jpeg"
-            alt="Dr. Azemhe Azena at the pulpit"
+            alt="Dr. Azemhe Azena"
             fill
             className="object-cover object-top"
             priority
@@ -180,25 +152,19 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent" />
         </div>
 
-        {/* Animated Orbs */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float" />
         <div
           className="absolute bottom-20 right-10 w-96 h-96 bg-gold/10 rounded-full blur-3xl"
           style={{ animation: "float 4s ease-in-out infinite 1s" }}
         />
-        <div
-          className="absolute top-1/2 left-1/3 w-48 h-48 bg-purple/15 rounded-full blur-3xl"
-          style={{ animation: "float 5s ease-in-out infinite 2s" }}
-        />
 
-        {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 w-full">
           <div className="max-w-2xl">
             <FadeIn direction="up" delay={0.2}>
               <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-5 py-2.5 mb-8">
                 <Sparkles className="w-4 h-4 text-gold" />
                 <span className="text-gold text-sm font-medium">
-                  Faith &bull; Leadership &bull; Impact
+                  Minister &bull; Author &bull; Entrepreneur &bull; Leader
                 </span>
               </div>
             </FadeIn>
@@ -220,8 +186,8 @@ export default function HomePage() {
               <p className="text-xl text-gray-300 mb-10 leading-relaxed">
                 Christian minister, teacher, entrepreneur, educationist, public
                 leader and advocate for human development whose life has been
-                shaped by faith, service, continuous learning and a desire to
-                make a meaningful difference in the lives of people.
+                shaped by faith, service and a desire to make a meaningful
+                difference in the lives of people.
               </p>
             </FadeIn>
 
@@ -235,18 +201,18 @@ export default function HomePage() {
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link
-                  href="/ministries"
+                  href="https://youtube.com/@weloveturningpoint"
+                  target="_blank"
                   className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all duration-300"
                 >
                   <Play className="w-5 h-5 fill-current" />
-                  Explore His Ministry
+                  Watch Sermons
                 </Link>
               </div>
             </FadeIn>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
           <Floating duration={2}>
             <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
@@ -262,7 +228,7 @@ export default function HomePage() {
           <FadeIn direction="up" delay={0.2}>
             <div className="bg-white rounded-2xl shadow-2xl p-8">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                {stats.map((stat, index) => (
+                {stats.map((stat) => (
                   <div key={stat.label} className="text-center">
                     <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-primary/10 to-gold/10 rounded-xl mb-3">
                       <stat.icon className="w-7 h-7 text-primary" />
@@ -299,7 +265,7 @@ export default function HomePage() {
           </FadeIn>
 
           <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {pillars.map((pillar, index) => (
+            {pillars.map((pillar) => (
               <StaggerItem key={pillar.title}>
                 <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 h-full">
                   <div
@@ -343,7 +309,7 @@ export default function HomePage() {
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src="/DSC_4476 copy.jpg.jpeg"
-                    alt="Dr. Azemhe Azena preaching"
+                    alt="Dr. Azemhe Azena"
                     width={600}
                     height={700}
                     className="object-cover w-full h-[500px]"
@@ -367,19 +333,17 @@ export default function HomePage() {
                   <span className="text-gradient">Faith & Impact</span>
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  Dr. Azemhe Azena is a Christian minister, teacher,
-                  entrepreneur, educationist, public leader and advocate for
-                  human development whose life has been shaped by faith,
-                  service, continuous learning and a desire to make a meaningful
-                  difference in the lives of people.
+                  Born in 1979 in Okpella, Edo State, Nigeria, Dr. Azemhe
+                  Azena is a seasoned pastor, global evangelist, author,
+                  entrepreneur and philanthropist whose ministry has impacted
+                  millions across the world.
                 </p>
                 <p className="text-gray-600 mb-8 leading-relaxed">
-                  From his early years in Edo State to his years of academic
-                  development, from pastoral leadership to entrepreneurship,
-                  from community engagement to political participation, and
-                  from years of ministry service to the establishment of Turning
-                  Point Gospel Centre International, his story reflects a
-                  continuing pursuit of purpose and positive influence.
+                  With a Doctorate in Philosophy (PhD), Dr. Azena combines
+                  scholarly depth with apostolic fire. His journey spans
+                  pastoral ministry, education, entrepreneurship, humanitarian
+                  intervention and public leadership — each chapter building
+                  upon the last.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -402,7 +366,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Journey Timeline */}
       <section className="py-24 bg-dark relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-pattern opacity-30" />
         <div className="absolute top-20 right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
@@ -411,16 +375,73 @@ export default function HomePage() {
           <FadeIn direction="up">
             <div className="text-center mb-16">
               <span className="inline-block text-gold font-semibold text-sm tracking-wider uppercase mb-4">
-                Testimonies of Impact
+                The Journey
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Key <span className="text-gradient">Milestones</span>
+              </h2>
+            </div>
+          </FadeIn>
+
+          <div className="relative max-w-4xl mx-auto">
+            <div className="absolute left-1/2 -translate-x-px h-full w-0.5 bg-gradient-to-b from-gold via-primary to-purple" />
+            <div className="space-y-12">
+              {milestones.map((milestone, index) => (
+                <FadeIn
+                  key={milestone.year}
+                  direction={index % 2 === 0 ? "left" : "right"}
+                  delay={index * 0.1}
+                >
+                  <div
+                    className={`flex items-center gap-8 ${
+                      index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                    }`}
+                  >
+                    <div
+                      className={`flex-1 ${
+                        index % 2 === 0 ? "text-right" : "text-left"
+                      }`}
+                    >
+                      <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 inline-block">
+                        <span className="text-gold font-bold text-lg">
+                          {milestone.year}
+                        </span>
+                        <h3 className="text-xl font-bold text-white mt-1">
+                          {milestone.title}
+                        </h3>
+                        <p className="text-gray-400 mt-1">
+                          {milestone.description}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="w-4 h-4 bg-gold rounded-full border-4 border-dark shrink-0 z-10" />
+                    <div className="flex-1" />
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-24 bg-cream relative overflow-hidden">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+
+        <div className="relative max-w-7xl mx-auto px-4">
+          <FadeIn direction="up">
+            <div className="text-center mb-16">
+              <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
+                What People Say
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
                 Lives <span className="text-gradient">Transformed</span>
               </h2>
             </div>
           </FadeIn>
 
           <div className="relative max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-12">
+            <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12">
               <div className="flex justify-center mb-6">
                 {[...Array(testimonials[currentTestimonial].rating)].map(
                   (_, i) => (
@@ -431,20 +452,19 @@ export default function HomePage() {
                   )
                 )}
               </div>
-              <p className="text-xl md:text-2xl text-white text-center mb-8 leading-relaxed italic">
+              <p className="text-xl md:text-2xl text-dark text-center mb-8 leading-relaxed italic">
                 &ldquo;{testimonials[currentTestimonial].text}&rdquo;
               </p>
               <div className="text-center">
-                <h4 className="text-lg font-bold text-white">
+                <h4 className="text-lg font-bold text-dark">
                   {testimonials[currentTestimonial].name}
                 </h4>
-                <p className="text-gold text-sm">
+                <p className="text-primary text-sm">
                   {testimonials[currentTestimonial].role}
                 </p>
               </div>
             </div>
 
-            {/* Navigation */}
             <div className="flex justify-center items-center gap-4 mt-8">
               <button
                 onClick={() =>
@@ -453,9 +473,9 @@ export default function HomePage() {
                       (prev - 1 + testimonials.length) % testimonials.length
                   )
                 }
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-10 h-10 bg-dark/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
               >
-                <ChevronLeft className="w-5 h-5 text-white" />
+                <ChevronLeft className="w-5 h-5 text-dark" />
               </button>
               <div className="flex gap-2">
                 {testimonials.map((_, index) => (
@@ -464,8 +484,8 @@ export default function HomePage() {
                     onClick={() => setCurrentTestimonial(index)}
                     className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                       index === currentTestimonial
-                        ? "bg-gold w-8"
-                        : "bg-white/30 hover:bg-white/50"
+                        ? "bg-primary w-8"
+                        : "bg-dark/20 hover:bg-dark/40"
                     }`}
                   />
                 ))}
@@ -476,104 +496,12 @@ export default function HomePage() {
                     (prev) => (prev + 1) % testimonials.length
                   )
                 }
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-10 h-10 bg-dark/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
               >
-                <ChevronRight className="w-5 h-5 text-white" />
+                <ChevronRight className="w-5 h-5 text-dark" />
               </button>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Upcoming Events with Countdown */}
-      <section className="py-24 bg-cream">
-        <div className="max-w-7xl mx-auto px-4">
-          <FadeIn direction="up">
-            <div className="text-center mb-16">
-              <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
-                Upcoming Events
-              </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
-                Join the <span className="text-gradient">Journey</span>
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Be part of upcoming ministry events, conferences and gatherings
-                led by Dr. Azemhe Azena.
-              </p>
-            </div>
-          </FadeIn>
-
-          {/* Countdown to Next Sunday Service */}
-          <FadeIn direction="up" delay={0.2}>
-            <div className="bg-gradient-to-br from-dark via-dark-light to-primary/30 rounded-3xl p-8 md:p-12 mb-12 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-gold/10 rounded-full blur-3xl" />
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-              <div className="relative z-10">
-                <div className="text-center mb-8">
-                  <span className="inline-flex items-center gap-2 bg-gold/20 border border-gold/30 text-gold px-4 py-2 rounded-full text-sm font-medium">
-                    <Sparkles className="w-4 h-4" />
-                    Next Sunday Service
-                  </span>
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mt-4">
-                    Turning Point Service
-                  </h3>
-                  <p className="text-gray-400 mt-2">
-                    Every Sunday: 7:00 AM – 9:30 AM
-                  </p>
-                </div>
-                <div className="flex justify-center">
-                  <CountdownTimer
-                    targetDate={getNextSunday()}
-                    label="Service starts in"
-                  />
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-
-          {/* Event Cards */}
-          <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {events.map((event) => (
-              <StaggerItem key={event.title}>
-                <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
-                  <div className="bg-gradient-to-br from-primary to-primary-dark p-6 text-white">
-                    <span className="inline-block bg-white/20 text-xs font-semibold px-3 py-1 rounded-full mb-3">
-                      {event.tag}
-                    </span>
-                    <h3 className="text-xl font-bold">{event.title}</h3>
-                  </div>
-                  <div className="p-6">
-                    <div className="space-y-3">
-                      <div className="flex items-center gap-3 text-gray-600">
-                        <Calendar className="w-4 h-4 text-primary" />
-                        <span className="text-sm">{event.date}</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-gray-600">
-                        <Clock className="w-4 h-4 text-primary" />
-                        <span className="text-sm">{event.time}</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-gray-600">
-                        <MapPin className="w-4 h-4 text-primary" />
-                        <span className="text-sm">{event.location}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerChildren>
-
-          <FadeIn direction="up" delay={0.4}>
-            <div className="text-center mt-12">
-              <Link
-                href="/events"
-                className="inline-flex items-center gap-2 bg-dark text-white px-8 py-4 rounded-full font-semibold hover:bg-primary transition-colors duration-300"
-              >
-                View All Events
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-          </FadeIn>
         </div>
       </section>
 
@@ -586,7 +514,7 @@ export default function HomePage() {
         <div className="relative max-w-4xl mx-auto px-4 text-center">
           <FadeIn direction="up">
             <Floating duration={4}>
-              <Church className="w-16 h-16 text-gold mx-auto mb-6" />
+              <Award className="w-16 h-16 text-gold mx-auto mb-6" />
             </Floating>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               The Journey{" "}
@@ -595,7 +523,7 @@ export default function HomePage() {
             <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
               What began as a personal journey has grown into a wider platform
               of influence. Discover the story, experience the ministry, and
-              witness the impact of Dr. Azemhe Azena.
+              witness the impact.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

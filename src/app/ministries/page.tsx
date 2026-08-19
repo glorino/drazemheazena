@@ -2,124 +2,77 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import {
   Users,
   Heart,
-  Shield,
-  Baby,
-  Music,
-  HandHelping,
   Globe,
-  Monitor,
-  Scale,
   BookOpen,
-  Calendar,
-  Clock,
-  MapPin,
+  Cross,
   ArrowRight,
   Sparkles,
-  Cross,
+  GraduationCap,
+  Landmark,
+  HandHelping,
+  BookMarked,
+  Play,
 } from "lucide-react";
 import {
   FadeIn,
-  ScaleIn,
   StaggerChildren,
   StaggerItem,
   Floating,
 } from "@/components/Animations";
 
-const ministries = [
+const ministryAreas = [
+  {
+    icon: Cross,
+    title: "Preaching & Teaching",
+    description:
+      "Powerful, Spirit-led preaching and teaching that transforms lives. Dr. Azena's ministry is characterized by clarity, depth and apostolic fire that draws people into a deeper relationship with Christ.",
+    color: "primary",
+  },
+  {
+    icon: Globe,
+    title: "Global Evangelism",
+    description:
+      "International crusades and conferences across 65+ countries, spreading the Gospel with signs, wonders and miraculous testimonies that confirm the power of God's Word.",
+    color: "gold",
+  },
+  {
+    icon: BookOpen,
+    title: "Literary Ministry",
+    description:
+      "14+ published books on faith, healing, deliverance and spiritual growth. Dr. Azena's writings have blessed readers worldwide and established him as a trusted voice in theological teaching.",
+    color: "purple",
+  },
   {
     icon: Users,
-    name: "PATHFINDERS",
-    title: "Youth Ministry",
+    title: "Mentorship & Discipleship",
     description:
-      "Empowering young people between ages 13-30 to discover their purpose, develop their gifts, and become agents of transformation. Our youth ministry provides mentorship, Bible study, leadership training, and exciting fellowship activities that help young believers navigate their faith journey.",
-    meeting: "Every Saturday | 3:00 PM",
-    location: "Youth Hall",
+      "Raising a generation of believers who are agents of transformation. Through mentorship and discipleship, Dr. Azena equips individuals to fulfill their God-given purpose.",
     color: "primary",
   },
   {
     icon: Heart,
-    name: "WOW",
-    title: "Women of the Word",
+    title: "Prayer Ministry",
     description:
-      "A vibrant community of women devoted to growing in faith, supporting one another, and making a difference. WOW provides a safe space for women to share, pray, learn, and develop their spiritual gifts while addressing the unique challenges women face in today's world.",
-    meeting: "Every 2nd Saturday | 10:00 AM",
-    location: "Women's Fellowship Hall",
-    color: "purple",
-  },
-  {
-    icon: Shield,
-    name: "MEN OF VALOR",
-    title: "Men's Ministry",
-    description:
-      "Building men of integrity, courage, and faith who lead their families, workplaces, and communities with godly wisdom. Our men's ministry focuses on accountability, spiritual growth, leadership development, and practical Christian living in today's challenges.",
-    meeting: "Every 3rd Saturday | 9:00 AM",
-    location: "Conference Room",
-    color: "dark",
-  },
-  {
-    icon: Baby,
-    name: "KINGDOM KIDS",
-    title: "Children's Ministry",
-    description:
-      "Nurturing children in the ways of the Lord through age-appropriate Bible stories, worship, crafts, and activities. Kingdom Kids provides a fun, safe, and engaging environment where children develop a personal relationship with Jesus Christ from an early age.",
-    meeting: "Every Sunday | During Services",
-    location: "Children's Church",
+      "Powerful intercessory prayer and breakthrough sessions. Dr. Azena's prayer ministry has been associated with countless healings, deliverances and life-changing testimonies.",
     color: "gold",
-  },
-  {
-    icon: Music,
-    name: "PRAISE WARRIORS",
-    title: "Music & Worship Ministry",
-    description:
-      "Leading the congregation into God's presence through powerful, Spirit-led worship. Our music ministry includes the choir, worship team, instrumentalists, and drama unit, all committed to creating an atmosphere where heaven touches earth.",
-    meeting: "Rehearsals: Every Thursday | 6:00 PM",
-    location: "Main Auditorium",
-    color: "primary",
   },
   {
     icon: HandHelping,
-    name: "PRAYER WARRIORS",
-    title: "Prayer Ministry",
+    title: "Humanitarian Service",
     description:
-      "Standing in the gap through fervent intercessory prayer for our church, community, nation, and the nations. Our prayer warriors are dedicated believers committed to spiritual warfare, breakthrough sessions, and 24/7 prayer chains that move heaven.",
-    meeting: "Daily | 6:00 AM & 9:00 PM",
-    location: "Prayer Room",
+      "Through the William Azemhe Azena Turning Point Foundation, Dr. Azena champions educational charity, healthcare support, youth training and community development.",
     color: "purple",
   },
-  {
-    icon: Globe,
-    name: "OUTREACH & MISSIONS",
-    title: "Evangelism Ministry",
-    description:
-      "Taking the Gospel beyond our church walls to communities, cities, and nations through crusades, street evangelism, hospital visits, prison ministry, and international mission trips. Join us in fulfilling the Great Commission.",
-    meeting: "Every 1st Saturday | 7:00 AM",
-    location: "Various Locations",
-    color: "gold",
-  },
-  {
-    icon: Monitor,
-    name: "MEDIA & TECHNOLOGY",
-    title: "Digital Ministry",
-    description:
-      "Spreading the Gospel through digital platforms, live streaming, social media, and content creation. Our media team ensures that every service reaches thousands online and that the message of transformation goes viral across the globe.",
-    meeting: "As Needed | Contact Coordinator",
-    location: "Media Center",
-    color: "primary",
-  },
-  {
-    icon: Scale,
-    name: "SOCIAL JUSTICE",
-    title: "WAATPF Foundation",
-    description:
-      "The William Azemhe Azena Turning Point Foundation champions social justice, humanitarian aid, and community development. Through education, healthcare, and empowerment programs, we bring hope and transformation to underserved communities.",
-    meeting: "Programs Throughout the Year",
-    location: "Various Communities",
-    color: "dark",
-  },
+];
+
+const impactStats = [
+  { value: "65+", label: "Countries Reached" },
+  { value: "100K+", label: "Lives Impacted" },
+  { value: "14+", label: "Books Written" },
+  { value: "18+", label: "Years Active" },
 ];
 
 export default function MinistriesPage() {
@@ -147,15 +100,15 @@ export default function MinistriesPage() {
               The <span className="text-gradient">Ministry</span> of Dr. Azemhe Azena
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl leading-relaxed">
-              Through Turning Point Gospel Centre International and various
-              outreach programs, Dr. Azemhe Azena continues to influence lives
-              through the Christian faith across Nigeria and beyond.
+              Through preaching, teaching, global evangelism, literature and
+              humanitarian service, Dr. Azemhe Azena continues to influence
+              lives across Nigeria and beyond.
             </p>
           </FadeIn>
         </div>
       </section>
 
-      {/* Introduction */}
+      {/* Ministry Overview */}
       <section className="py-20 bg-cream">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <FadeIn direction="up">
@@ -167,61 +120,55 @@ export default function MinistriesPage() {
               <span className="text-gradient">Transformation</span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Dr. Azemhe Azena's ministry spans preaching, teaching,
-              counselling, prayer, evangelism and mentorship. Through Turning
-              Point Gospel Centre International and various outreach programs,
-              he continues to influence lives through the Christian faith. His
-              ministry is focused on raising a generation of believers who are
-              agents of transformation in their sphere of influence.
+              Dr. Azemhe Azena's ministry spans preaching, teaching, counselling,
+              prayer, evangelism and mentorship. His journey began in 2007 when he
+              joined Omega Fire Ministries as a pastor and has since grown into a
+              global platform of influence. Through Turning Point Gospel Centre
+              International and various outreach programs, he continues to
+              transform lives through the Christian faith.
             </p>
           </FadeIn>
         </div>
       </section>
 
-      {/* Ministry Cards */}
+      {/* Ministry Areas */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
+          <FadeIn direction="up">
+            <div className="text-center mb-16">
+              <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
+                Areas of Ministry
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
+                How He <span className="text-gradient">Serves</span>
+              </h2>
+            </div>
+          </FadeIn>
+
           <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {ministries.map((ministry) => (
-              <StaggerItem key={ministry.name}>
-                <div className="bg-cream rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group h-full flex flex-col">
+            {ministryAreas.map((area) => (
+              <StaggerItem key={area.title}>
+                <div className="bg-cream rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group h-full">
                   <div
                     className={`p-8 ${
-                      ministry.color === "primary"
+                      area.color === "primary"
                         ? "bg-gradient-to-br from-primary to-primary-dark"
-                        : ministry.color === "gold"
+                        : area.color === "gold"
                         ? "bg-gradient-to-br from-gold to-gold-light"
-                        : ministry.color === "purple"
-                        ? "bg-gradient-to-br from-purple to-purple/80"
-                        : "bg-gradient-to-br from-dark to-dark-light"
+                        : "bg-gradient-to-br from-purple to-purple/80"
                     }`}
                   >
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center">
-                        <ministry.icon className="w-7 h-7 text-white" />
-                      </div>
-                      <span className="text-white/60 text-sm font-medium">
-                        {ministry.name}
-                      </span>
+                    <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                      <area.icon className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">
-                      {ministry.title}
+                    <h3 className="text-2xl font-bold text-white">
+                      {area.title}
                     </h3>
                   </div>
-                  <div className="p-8 flex-1 flex flex-col">
-                    <p className="text-gray-600 leading-relaxed mb-6 flex-1">
-                      {ministry.description}
+                  <div className="p-8">
+                    <p className="text-gray-600 leading-relaxed">
+                      {area.description}
                     </p>
-                    <div className="space-y-2 pt-4 border-t border-cream-dark">
-                      <div className="flex items-center gap-3 text-sm text-gray-500">
-                        <Calendar className="w-4 h-4 text-primary" />
-                        <span>{ministry.meeting}</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-sm text-gray-500">
-                        <MapPin className="w-4 h-4 text-primary" />
-                        <span>{ministry.location}</span>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </StaggerItem>
@@ -230,22 +177,109 @@ export default function MinistriesPage() {
         </div>
       </section>
 
-      {/* Get Involved */}
+      {/* Impact Stats */}
       <section className="py-24 bg-dark relative overflow-hidden">
         <div className="absolute inset-0 bg-pattern opacity-30" />
         <div className="absolute top-20 right-20 w-72 h-72 bg-gold/10 rounded-full blur-3xl" />
 
-        <div className="relative max-w-4xl mx-auto px-4 text-center">
+        <div className="relative max-w-7xl mx-auto px-4">
           <FadeIn direction="up">
-            <span className="inline-block text-gold font-semibold text-sm tracking-wider uppercase mb-4">
-              Join the Ministry
+            <div className="text-center mb-16">
+              <span className="inline-block text-gold font-semibold text-sm tracking-wider uppercase mb-4">
+                Global Impact
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                The <span className="text-gradient">Reach</span>
+              </h2>
+            </div>
+          </FadeIn>
+
+          <StaggerChildren className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            {impactStats.map((stat) => (
+              <StaggerItem key={stat.label}>
+                <div className="text-center">
+                  <div className="text-5xl md:text-6xl font-bold text-gold mb-2">
+                    {stat.value}
+                  </div>
+                  <p className="text-gray-400">{stat.label}</p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerChildren>
+        </div>
+      </section>
+
+      {/* Turning Point Gospel Centre */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <FadeIn direction="left">
+              <div>
+                <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
+                  Turning Point Gospel Centre
+                </span>
+                <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6 leading-tight">
+                  A New <span className="text-gradient">Chapter</span>
+                </h2>
+                <div className="space-y-4 text-gray-600 leading-relaxed">
+                  <p>
+                    In 2026, an important chapter began with the emergence of
+                    Turning Point Gospel Centre International. The ministry
+                    represents a new expression of Dr. Azena's Christian service
+                    and is associated with the leadership of Dr. Azemhe Azena and
+                    Pastor Precious Azemhe Azena.
+                  </p>
+                  <p>
+                    The name "Turning Point" reflects a core belief: that every
+                    encounter with God's Word should lead to a transformative
+                    moment — a turning point — that redirects the course of one's
+                    life, family and destiny.
+                  </p>
+                </div>
+                <div className="mt-8">
+                  <Link
+                    href="https://youtube.com/@weloveturningpoint"
+                    target="_blank"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-primary-dark text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+                  >
+                    <Play className="w-5 h-5 fill-current" />
+                    Watch Services
+                  </Link>
+                </div>
+              </div>
+            </FadeIn>
+
+            <FadeIn direction="right">
+              <div className="relative">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/DSC_4475 copy.jpg.jpeg"
+                    alt="Turning Point Gospel Centre"
+                    width={600}
+                    height={700}
+                    className="object-cover w-full h-[500px]"
+                  />
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 bg-cream">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <FadeIn direction="up">
+            <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
+              Connect
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
               Be Part of the <span className="text-gradient">Journey</span>
             </h2>
-            <p className="text-xl text-gray-300 mb-10 leading-relaxed">
-              Whether you want to attend a service, join a ministry, or connect
-              with Dr. Azemhe Azena's team, we would love to hear from you.
+            <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+              Whether you want to attend a service, invite Dr. Azena for a
+              speaking engagement, or connect with his ministry, we would love
+              to hear from you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -258,7 +292,7 @@ export default function MinistriesPage() {
               <Link
                 href="https://youtube.com/@weloveturningpoint"
                 target="_blank"
-                className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 bg-white border-2 border-dark/10 text-dark px-8 py-4 rounded-full text-lg font-semibold hover:bg-dark/5 transition-all duration-300"
               >
                 Watch Services
               </Link>
