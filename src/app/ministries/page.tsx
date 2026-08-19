@@ -130,7 +130,7 @@ export default function MinistriesPage() {
         <div className="absolute inset-0">
           <Image
             src="/DSC_3961 copy.jpg.jpeg"
-            alt="Church ministry worship"
+            alt="Dr. Azemhe Azena ministry"
             fill
             className="object-cover object-center"
             priority
@@ -141,15 +141,15 @@ export default function MinistriesPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 w-full">
           <FadeIn direction="up">
             <span className="inline-block text-gold font-semibold text-sm tracking-wider uppercase mb-4">
-              Our Ministries
+              Ministry
             </span>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Discover Your <span className="text-gradient">Purpose</span>
+              The <span className="text-gradient">Ministry</span> of Dr. Azemhe Azena
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl leading-relaxed">
-              At Turning Point Gospel Center, there is a place for everyone.
-              Explore our diverse ministries and find where you belong in
-              God&apos;s plan.
+              Through Turning Point Gospel Centre International and various
+              outreach programs, Dr. Azemhe Azena continues to influence lives
+              through the Christian faith across Nigeria and beyond.
             </p>
           </FadeIn>
         </div>
@@ -163,17 +163,16 @@ export default function MinistriesPage() {
               <Cross className="w-12 h-12 text-primary mx-auto mb-6" />
             </Floating>
             <h2 className="text-3xl md:text-4xl font-bold text-dark mb-6">
-              Every Member is a{" "}
-              <span className="text-gradient">Minister</span>
+              A Ministry of{" "}
+              <span className="text-gradient">Transformation</span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Our ministries are designed to equip, empower, and engage every
-              believer in the work of the Kingdom. Whether you are a youth,
-              woman, man, child, or simply passionate about serving God, there
-              is a place for you to grow, serve, and make a difference. Under
-              the visionary leadership of Dr. Azemhe Azena, we believe that
-              every member is called to be a minister in their sphere of
-              influence.
+              Dr. Azemhe Azena's ministry spans preaching, teaching,
+              counselling, prayer, evangelism and mentorship. Through Turning
+              Point Gospel Centre International and various outreach programs,
+              he continues to influence lives through the Christian faith. His
+              ministry is focused on raising a generation of believers who are
+              agents of transformation in their sphere of influence.
             </p>
           </FadeIn>
         </div>
@@ -239,15 +238,14 @@ export default function MinistriesPage() {
         <div className="relative max-w-4xl mx-auto px-4 text-center">
           <FadeIn direction="up">
             <span className="inline-block text-gold font-semibold text-sm tracking-wider uppercase mb-4">
-              Join a Ministry
+              Join the Ministry
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to <span className="text-gradient">Get Involved</span>?
+              Be Part of the <span className="text-gradient">Journey</span>
             </h2>
             <p className="text-xl text-gray-300 mb-10 leading-relaxed">
-              Serving in a ministry is one of the best ways to grow in your
-              faith, connect with others, and use your gifts for God&apos;s
-              glory. Contact us today to find the perfect ministry for you.
+              Whether you want to attend a service, join a ministry, or connect
+              with Dr. Azemhe Azena's team, we would love to hear from you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -262,7 +260,7 @@ export default function MinistriesPage() {
                 target="_blank"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all duration-300"
               >
-                Watch Our Services
+                Watch Services
               </Link>
             </div>
           </FadeIn>

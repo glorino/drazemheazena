@@ -18,17 +18,16 @@ const navLinks = [
   { href: "/", label: "Home" },
   {
     href: "/about",
-    label: "About",
+    label: "About Dr. Azemhe",
     children: [
-      { href: "/about#pastor", label: "Our Pastor" },
-      { href: "/about#history", label: "Church History" },
+      { href: "/about#pastor", label: "Biography" },
+      { href: "/about#history", label: "Ministry Journey" },
       { href: "/about#vision", label: "Vision & Mission" },
     ],
   },
-  { href: "/ministries", label: "Ministries" },
-  { href: "/sermons", label: "Sermons" },
+  { href: "/ministries", label: "Ministry" },
+  { href: "/sermons", label: "Media" },
   { href: "/events", label: "Events" },
-  { href: "/give", label: "Give" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -57,12 +56,12 @@ export default function Header() {
             </a>
             <div className="flex items-center gap-2">
               <MapPin className="w-3.5 h-3.5 text-gold" />
-              <span>16 Irabor St off Ewan St, Upper Mission Ext, Uteh, Benin City</span>
+              <span>Benin City, Edo State, Nigeria</span>
             </div>
           </div>
           <div className="flex items-center gap-2">
             <Clock className="w-3.5 h-3.5 text-gold" />
-            <span>Sundays 7:00 AM | Wednesdays 4:00 PM</span>
+            <span>Ministry &bull; Education &bull; Enterprise &bull; Impact</span>
           </div>
         </div>
       </div>
@@ -83,7 +82,7 @@ export default function Header() {
                 <div className="w-14 h-14 rounded-full overflow-hidden group-hover:scale-110 transition-transform duration-300 border-2 border-gold/30">
                   <Image
                     src="/logo.png"
-                    alt="Turning Point Gospel Center International"
+                    alt="Dr. Azemhe Azena"
                     width={56}
                     height={56}
                     className="w-full h-full object-cover"
@@ -93,10 +92,10 @@ export default function Header() {
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-lg font-bold text-dark leading-tight">
-                  Turning Point
+                  Dr. Azemhe Azena
                 </h1>
                 <p className="text-xs text-primary font-semibold tracking-wider uppercase">
-                  Gospel Center International
+                  Faith &bull; Leadership &bull; Impact
                 </p>
               </div>
             </Link>
@@ -150,17 +149,17 @@ export default function Header() {
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center gap-3">
               <Link
-                href="/give"
+                href="/about"
                 className="flex items-center gap-2 bg-gradient-to-r from-gold to-gold-light text-dark px-5 py-2.5 rounded-full text-sm font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
               >
                 <Heart className="w-4 h-4" />
-                Give Now
+                Explore His Story
               </Link>
               <Link
                 href="/contact"
                 className="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-primary-dark hover:shadow-lg hover:scale-105 transition-all duration-300"
               >
-                Visit Us
+                Contact
               </Link>
             </div>
 
@@ -215,19 +214,19 @@ export default function Header() {
                 ))}
                 <div className="pt-4 space-y-3">
                   <Link
-                    href="/give"
+                    href="/about"
                     onClick={() => setIsOpen(false)}
                     className="flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-gold-light text-dark px-5 py-3 rounded-full font-semibold"
                   >
                     <Heart className="w-4 h-4" />
-                    Give Now
+                    Explore His Story
                   </Link>
                   <Link
                     href="/contact"
                     onClick={() => setIsOpen(false)}
                     className="block text-center bg-primary text-white px-5 py-3 rounded-full font-semibold"
                   >
-                    Visit Us
+                    Contact
                   </Link>
                 </div>
               </div>

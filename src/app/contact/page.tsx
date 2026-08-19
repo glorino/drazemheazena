@@ -166,14 +166,15 @@ export default function ContactPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 w-full">
           <FadeIn direction="up">
             <span className="inline-block text-gold font-semibold text-sm tracking-wider uppercase mb-4">
-              Contact Us
+              Contact
             </span>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Get in <span className="text-gradient">Touch</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl leading-relaxed">
-              We would love to hear from you. Whether you have a question,
-              need prayer, or want to visit our church, we are here for you.
+              Whether you have a question, need prayer, want to book Dr. Azemhe
+              Azena for a speaking engagement, or want to visit a service, we
+              are here for you.
             </p>
           </FadeIn>
         </div>
@@ -270,10 +271,10 @@ export default function ContactPage() {
                         >
                           <option value="">Select a subject</option>
                           <option value="prayer">Prayer Request</option>
-                          <option value="visit">I Want to Visit</option>
-                          <option value="membership">Membership Inquiry</option>
-                          <option value="ministry">Ministry Information</option>
-                          <option value="giving">Giving Question</option>
+                          <option value="speaking">Speaking Engagement</option>
+                          <option value="ministry">Ministry Inquiry</option>
+                          <option value="media">Media & Interviews</option>
+                          <option value="partnership">Partnership</option>
                           <option value="counseling">Pastoral Counseling</option>
                           <option value="other">Other</option>
                         </select>
@@ -440,7 +441,7 @@ export default function ContactPage() {
               <div className="p-6 text-center">
                 <div className="bg-primary text-white py-3 px-6 rounded-xl mb-4 inline-block">
                   <h3 className="text-xl font-bold">
-                    Turning Point Gospel Center Int&apos;l
+                    Dr. Azemhe Azena
                   </h3>
                 </div>
                 <p className="text-gray-700 font-semibold">

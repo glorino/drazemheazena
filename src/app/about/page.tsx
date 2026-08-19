@@ -134,7 +134,7 @@ export default function AboutPage() {
         <div className="absolute inset-0">
           <Image
             src="/DSC_3963 copy.jpg.jpeg"
-            alt="Church worship service"
+            alt="Dr. Azemhe Azena"
             fill
             className="object-cover object-center"
             priority
@@ -145,54 +145,54 @@ export default function AboutPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 w-full">
           <FadeIn direction="up">
             <span className="inline-block text-gold font-semibold text-sm tracking-wider uppercase mb-4">
-              About Us
+              Biography
             </span>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Our Story of <span className="text-gradient">Faith</span>
+              Dr. Azemhe Azena <span className="text-gradient">PhD</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl leading-relaxed">
-              Discover the heart behind Turning Point Gospel Center
-              International and the vision that drives our mission to transform
-              lives across the globe.
+              A life of faith, leadership, learning, enterprise and service —
+              continually expanding its influence from the individual to the
+              family, from the church to society.
             </p>
           </FadeIn>
         </div>
       </section>
 
-      {/* Church History */}
+      {/* Ministry Journey */}
       <section id="history" className="py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <FadeIn direction="left">
               <div>
                 <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
-                  Our Journey
+                  Ministry Journey
                 </span>
                 <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6 leading-tight">
-                  A Church Born for{" "}
-                  <span className="text-gradient">Such a Time</span>
+                  A Journey of{" "}
+                  <span className="text-gradient">Faith & Service</span>
                 </h2>
                 <div className="space-y-6 text-gray-600 leading-relaxed">
                   <p>
-                    Turning Point Gospel Center International was founded in 2026
-                    by Dr. Azemhe Azena PhD, representing the divine
-                    culmination of nearly two decades of dedicated pastoral
-                    ministry and global evangelism.
+                    Dr. Azemhe Azena's ministry journey began in 2007 when he
+                    joined Omega Fire Ministries as a pastor. Over the years, he
+                    developed through different levels of pastoral leadership
+                    and became associated with senior responsibilities within
+                    the ministry.
                   </p>
                   <p>
-                    Prior to establishing Turning Point, Dr. Azena served for 18
-                    years at Omega Fire Ministries, where he honed his
-                    anointing, deepened his understanding of God&apos;s Word, and
-                    developed a heart for the nations. During this period, he
-                    traveled to over 65 countries, preaching the Gospel with
-                    signs, wonders, and miraculous testimonies.
+                    His years in ministry shaped his understanding of people,
+                    leadership, communication, responsibility and service.
+                    Through preaching, teaching, counselling, prayer, evangelism
+                    and mentorship, he developed a public ministry focused on
+                    influencing lives through the Christian faith.
                   </p>
                   <p>
-                    The name &ldquo;Turning Point&rdquo; reflects our core
-                    belief: that every encounter with God&apos;s Word should lead
-                    to a transformative moment—a turning point—that redirects
-                    the course of one&apos;s life, family, and destiny. We are
-                    not just a church; we are a movement of transformation.
+                    In 2026, another important chapter began with the emergence
+                    of Turning Point Gospel Centre International. The ministry
+                    represents a new expression of his Christian service and is
+                    associated with the leadership of Dr. Azemhe Azena and
+                    Pastor Precious Azemhe Azena.
                   </p>
                 </div>
               </div>
@@ -237,7 +237,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Pastor Bio */}
+      {/* Biography */}
       <section id="pastor" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -267,7 +267,7 @@ export default function AboutPage() {
             <FadeIn direction="right">
               <div>
                 <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
-                  Our Senior Pastor
+                  Biography
                 </span>
                 <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6 leading-tight">
                   Dr. Azemhe Azena <span className="text-gradient">PhD</span>
@@ -329,7 +329,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission */}
+      {/* Vision & Mission */}
       <section id="vision" className="py-24 bg-dark relative overflow-hidden">
         <div className="absolute inset-0 bg-pattern opacity-30" />
         <div className="absolute top-20 left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
@@ -339,10 +339,10 @@ export default function AboutPage() {
           <FadeIn direction="up">
             <div className="text-center mb-16">
               <span className="inline-block text-gold font-semibold text-sm tracking-wider uppercase mb-4">
-                Our Foundation
+                Vision & Mission
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our <span className="text-gradient">Mission</span>
+                The <span className="text-gradient">Purpose</span>
               </h2>
             </div>
           </FadeIn>
@@ -357,16 +357,15 @@ export default function AboutPage() {
                     <Compass className="w-10 h-10 text-white" />
                   </div>
                   <blockquote className="text-xl md:text-2xl text-gray-300 leading-relaxed italic mb-8">
-                    &ldquo;Our mission is to share God&apos;s love and grace by
-                    fostering spiritual growth, serving our community with
-                    compassion, and building meaningful relationships. We are
-                    dedicated to living out our faith through worship, outreach,
-                    and impactful service.&rdquo;
+                    &ldquo;A life of faith, leadership, learning, enterprise and
+                    service, continually expanding its influence from the
+                    individual to the family, from the church to society, and
+                    from personal development to community impact.&rdquo;
                   </blockquote>
                   <div className="flex items-center justify-center gap-4">
                     <div className="h-px w-16 bg-gold/50" />
                     <span className="text-gold font-semibold text-sm tracking-wider uppercase">
-                      Turning Point Gospel Center International
+                      Dr. Azemhe Azena
                     </span>
                     <div className="h-px w-16 bg-gold/50" />
                   </div>
@@ -383,13 +382,14 @@ export default function AboutPage() {
           <FadeIn direction="up">
             <div className="text-center mb-16">
               <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
-                What Guides Us
+                Personal Values
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
-                Our Core <span className="text-gradient">Values</span>
+                Core <span className="text-gradient">Values</span>
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                These fundamental principles shape everything we do and define who we are as a church family.
+                These fundamental principles shape everything Dr. Azemhe Azena does
+                and define who he is as a leader, minister and servant of God.
               </p>
             </div>
           </FadeIn>
@@ -417,20 +417,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership Team */}
+      {/* Leadership */}
       <section className="py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn direction="up">
             <div className="text-center mb-16">
               <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
-                Our Leadership
+                Leadership
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
                 Led by <span className="text-gradient">God&apos;s Grace</span>
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our leadership team is committed to serving God&apos;s people
-                with integrity, passion, and a heart for transformation.
+                Dr. Azemhe Azena leads with integrity, passion, and a heart
+                for transformation, alongside his wife Pastor Precious Azemhe Azena.
               </p>
             </div>
           </FadeIn>
@@ -471,26 +471,26 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <FadeIn direction="up">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Be Part of Our Story
+              The Journey Continues
             </h2>
             <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-              Join a community of believers committed to transformation,
-              purpose, and divine encounters.
+              Discover the ongoing story of faith, leadership, learning,
+              enterprise and service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                href="/ministries"
                 className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-full text-lg font-bold hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
                 <Users className="w-5 h-5" />
-                Join Our Church
+                Explore Ministry
               </Link>
               <Link
-                href="/give"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-gold/20 border border-gold/50 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gold/30 transition-all duration-300"
               >
                 <Heart className="w-5 h-5" />
-                Support Our Mission
+                Get in Touch
               </Link>
             </div>
           </FadeIn>

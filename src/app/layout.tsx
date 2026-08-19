@@ -4,28 +4,32 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Turning Point Gospel Center International | Dr. Azemhe Azena",
+  title: "Dr. Azemhe Azena | Faith, Leadership & Impact",
   description:
-    "Turning Point Gospel Center International - A place of transformation, hope, and divine encounters. Senior Pastor: Dr. Azemhe Azena PhD. Located in Benin City, Edo State, Nigeria.",
+    "Dr. Azemhe Azena PhD - Christian minister, teacher, entrepreneur, educationist, public leader and advocate for human development. A life of faith, leadership, learning, enterprise and service.",
   keywords: [
-    "church",
-    "gospel",
-    "turning point",
     "Dr Azemhe Azena",
+    "pastor",
+    "evangelist",
+    "author",
+    "entrepreneur",
+    "educationist",
+    "public leader",
     "Benin City",
-    "worship",
-    "prayer",
+    "Nigeria",
     "faith",
+    "leadership",
+    "humanitarian",
   ],
   icons: {
     icon: "/logo.png",
   },
   openGraph: {
-    title: "Turning Point Gospel Center International",
+    title: "Dr. Azemhe Azena | Faith, Leadership & Impact",
     description:
-      "A place of transformation, hope, and divine encounters. Senior Pastor: Dr. Azemhe Azena PhD.",
+      "Christian minister, teacher, entrepreneur, educationist, public leader and advocate for human development.",
     url: "https://drazemheazena.vercel.app",
-    siteName: "Turning Point Gospel Center International",
+    siteName: "Dr. Azemhe Azena",
     locale: "en_US",
     type: "website",
   },

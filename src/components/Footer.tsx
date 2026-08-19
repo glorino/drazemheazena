@@ -19,22 +19,21 @@ import { motion } from "framer-motion";
 
 const quickLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/ministries", label: "Ministries" },
-  { href: "/sermons", label: "Sermons" },
+  { href: "/about", label: "About Dr. Azemhe" },
+  { href: "/ministries", label: "Ministry" },
+  { href: "/sermons", label: "Media" },
   { href: "/events", label: "Events" },
-  { href: "/give", label: "Give" },
   { href: "/contact", label: "Contact" },
 ];
 
-const ministries = [
-  "Youth Ministry",
-  "Women Ministry",
-  "Men Ministry",
-  "Children Ministry",
-  "Music Ministry",
-  "Prayer Ministry",
-  "Outreach Ministry",
+const focusAreas = [
+  "Faith & Ministry",
+  "Education",
+  "Enterprise",
+  "Humanitarian Impact",
+  "Public Leadership",
+  "Youth Empowerment",
+  "Community Development",
 ];
 
 const socialLinks = [
@@ -93,7 +92,7 @@ export default function Footer() {
                 Stay Connected
               </h3>
               <p className="text-gray-400">
-                Subscribe to our newsletter for updates and spiritual growth
+                Subscribe for updates on ministry, events and inspiration from Dr. Azemhe Azena
               </p>
             </div>
             <div className="flex w-full md:w-auto">
@@ -133,21 +132,22 @@ export default function Footer() {
               <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-gold/30">
                 <img
                   src="/logo.png"
-                  alt="Turning Point Gospel Center International"
+                  alt="Dr. Azemhe Azena"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div>
-                <h4 className="text-lg font-bold text-white">Turning Point</h4>
+                <h4 className="text-lg font-bold text-white">Dr. Azemhe Azena</h4>
                 <p className="text-xs text-gold tracking-wider uppercase">
-                  Gospel Center International
+                  Faith &bull; Leadership &bull; Impact
                 </p>
               </div>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              A place of transformation, hope, and divine encounters. Where
-              lives are changed and destinies are fulfilled through the power of
-              God&apos;s word.
+              A life of faith, leadership, learning, enterprise and service,
+              continually expanding its influence from the individual to the
+              family, from the church to society, and from personal development
+              to community impact.
             </p>
             <div className="space-y-3">
               <a
@@ -203,30 +203,30 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Ministries */}
+          {/* Focus Areas */}
           <div>
             <h4 className="text-lg font-bold text-white mb-6">
-              Our Ministries
+              Focus Areas
             </h4>
             <ul className="space-y-3">
-              {ministries.map((ministry) => (
-                <li key={ministry}>
+              {focusAreas.map((area) => (
+                <li key={area}>
                   <Link
-                    href="/ministries"
+                    href="/about"
                     className="text-gray-400 hover:text-gold hover:pl-2 transition-all duration-300 flex items-center gap-2"
                   >
                     <span className="w-1.5 h-1.5 bg-primary rounded-full" />
-                    {ministry}
+                    {area}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Service Times */}
+          {/* Ministry Schedule */}
           <div>
             <h4 className="text-lg font-bold text-white mb-6">
-              Service Times
+              Ministry Schedule
             </h4>
             <div className="space-y-4">
               <div className="bg-white/5 rounded-xl p-4 border border-white/10">
@@ -281,10 +281,9 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-400 text-sm flex items-center gap-1">
-              &copy; {new Date().getFullYear()} Turning Point Gospel Center
-              International. Made with{" "}
-              <Heart className="w-3.5 h-3.5 text-primary fill-primary" /> by
-              Dr. Azemhe Azena
+              &copy; {new Date().getFullYear()} Dr. Azemhe Azena. Made with{" "}
+              <Heart className="w-3.5 h-3.5 text-primary fill-primary" /> for
+              the glory of God.
             </p>
             <motion.button
               onClick={scrollToTop}

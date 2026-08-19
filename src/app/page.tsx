@@ -6,13 +6,11 @@ import { motion } from "framer-motion";
 import {
   BookOpen,
   Heart,
-  Music,
   Users,
   Play,
   ArrowRight,
   Star,
   Globe,
-  Trophy,
   BookMarked,
   Clock,
   ChevronLeft,
@@ -41,33 +39,33 @@ const stats = [
   { icon: Clock, value: "18+", label: "Years of Ministry" },
 ];
 
-const features = [
+const pillars = [
   {
-    icon: BookOpen,
-    title: "Calvary Experience",
+    icon: Cross,
+    title: "Faith",
     description:
-      "Deep dive into God's Word with structured study groups, personal devotion guides, and life-changing teachings that illuminate scripture for everyday living.",
+      "Christian ministry, preaching, teaching, prayer and spiritual leadership. A life rooted in the power of God's Word and dedicated to leading others into deeper faith.",
     color: "primary",
   },
   {
-    icon: Heart,
-    title: "Prayer Ministry",
+    icon: BookOpen,
+    title: "Education",
     description:
-      "Powerful intercessory prayer teams covering the needs of our congregation and community, with dedicated prayer chains and breakthrough sessions.",
+      "Personal academic development spanning Mass Communication, Theology, Religious Studies, Christian Philosophy and Law. Committed to lifelong learning and educational excellence.",
     color: "gold",
   },
   {
-    icon: Music,
-    title: "Worship Experience",
+    icon: Globe,
+    title: "Enterprise",
     description:
-      "Spirit-filled worship led by our anointed music ministry, creating an atmosphere where heaven touches earth and hearts are drawn to God's presence.",
+      "Entrepreneurship across education, events, rentals, property, real estate and hospitality. Building institutions that create lasting value and opportunity.",
     color: "purple",
   },
   {
     icon: Users,
-    title: "Fellowship",
+    title: "Impact",
     description:
-      "Building meaningful connections through small groups, community events, and shared experiences that strengthen bonds of faith and friendship.",
+      "Youth empowerment, humanitarian intervention, community development, mentorship and public service through the William Azemhe Azena Turning Point Foundation.",
     color: "primary",
   },
 ];
@@ -75,26 +73,26 @@ const features = [
 const testimonials = [
   {
     name: "Sister Grace Okonkwo",
-    role: "Member since 2019",
-    text: "Turning Point Gospel Center has been my spiritual home for years. Dr. Azena's teachings have transformed my walk with God and given me purpose. The community here is truly loving.",
+    role: "Follower since 2019",
+    text: "Dr. Azemhe Azena's teachings have transformed my walk with God and given me purpose. His ministry is a beacon of hope to our generation.",
     rating: 5,
   },
   {
     name: "Brother Emmanuel Igbinoba",
     role: "Youth Leader",
-    text: "The PATHFINDERS youth ministry under Dr. Azena's vision has helped thousands of young people discover their calling. I found my purpose and destiny in this church.",
+    text: "The PATHFINDERS youth ministry under Dr. Azena's vision has helped thousands of young people discover their calling. I found my purpose through his mentorship.",
     rating: 5,
   },
   {
     name: "Deaconess Mercy Aikhionbare",
     role: "Prayer Ministry Head",
-    text: "The anointing on Dr. Azena's life is evident in every service. I have witnessed countless healings and breakthroughs in our prayer meetings. God is truly here.",
+    text: "The anointing on Dr. Azena's life is evident in every service. I have witnessed countless healings and breakthroughs through his ministry.",
     rating: 5,
   },
   {
     name: "Pastor (Mrs.) Blessing Edevbie",
     role: "Ministry Director",
-    text: "In 18 years of following this ministry, I have seen God's faithfulness manifest in extraordinary ways. This church is a beacon of hope to our generation.",
+    text: "In 18 years of following Dr. Azena's ministry, I have seen God's faithfulness manifest in extraordinary ways. He is a beacon of hope.",
     rating: 5,
   },
 ];
@@ -200,29 +198,30 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-5 py-2.5 mb-8">
                 <Sparkles className="w-4 h-4 text-gold" />
                 <span className="text-gold text-sm font-medium">
-                  Welcome to Turning Point Gospel Center International
+                  Faith &bull; Leadership &bull; Impact
                 </span>
               </div>
             </FadeIn>
 
             <FadeIn direction="up" delay={0.4}>
               <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
-                Where{" "}
-                <span className="text-gradient">Lives Are</span>
-                <br />
-                Transformed
+                Dr. Azemhe{" "}
+                <span className="text-gradient">Azena</span>
               </h1>
+            </FadeIn>
+
+            <FadeIn direction="up" delay={0.5}>
+              <p className="text-xl md:text-2xl text-gold font-semibold mb-6 tracking-wide">
+                A Voice of Faith. A Leader of Impact. A Builder of People.
+              </p>
             </FadeIn>
 
             <FadeIn direction="up" delay={0.6}>
               <p className="text-xl text-gray-300 mb-10 leading-relaxed">
-                A place of transformation, hope, and divine encounters. Under
-                the anointed leadership of{" "}
-                <span className="text-gold font-semibold">
-                  Dr. Azemhe Azena PhD
-                </span>
-                , we are raising a generation of believers who are agents of
-                transformation in their sphere of influence.
+                Christian minister, teacher, entrepreneur, educationist, public
+                leader and advocate for human development whose life has been
+                shaped by faith, service, continuous learning and a desire to
+                make a meaningful difference in the lives of people.
               </p>
             </FadeIn>
 
@@ -232,16 +231,15 @@ export default function HomePage() {
                   href="/about"
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary-dark text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
                 >
-                  Learn More
+                  Discover His Story
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link
-                  href="https://youtube.com/@weloveturningpoint"
-                  target="_blank"
+                  href="/ministries"
                   className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all duration-300"
                 >
                   <Play className="w-5 h-5 fill-current" />
-                  Watch Live
+                  Explore His Ministry
                 </Link>
               </div>
             </FadeIn>
@@ -281,53 +279,53 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Features Grid */}
+      {/* Five Pillars Section */}
       <section className="py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4">
           <FadeIn direction="up">
             <div className="text-center mb-16">
               <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
-                What We Offer
+                The Five Pillars
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
-                Experience God&apos;s{" "}
-                <span className="text-gradient">Transforming Power</span>
+                A Life of{" "}
+                <span className="text-gradient">Purpose & Influence</span>
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our ministries are designed to nurture your spiritual growth and
-                connect you with a community of believers.
+                The story of Dr. Azemhe Azena is built on five central pillars
+                that define his journey of faith, leadership and service.
               </p>
             </div>
           </FadeIn>
 
           <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <StaggerItem key={feature.title}>
+            {pillars.map((pillar, index) => (
+              <StaggerItem key={pillar.title}>
                 <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 h-full">
                   <div
                     className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110 ${
-                      feature.color === "primary"
+                      pillar.color === "primary"
                         ? "bg-primary/10 group-hover:bg-primary"
-                        : feature.color === "gold"
+                        : pillar.color === "gold"
                         ? "bg-gold/10 group-hover:bg-gold"
                         : "bg-purple/10 group-hover:bg-purple"
                     }`}
                   >
-                    <feature.icon
+                    <pillar.icon
                       className={`w-8 h-8 transition-colors duration-300 ${
-                        feature.color === "primary"
+                        pillar.color === "primary"
                           ? "text-primary group-hover:text-white"
-                          : feature.color === "gold"
+                          : pillar.color === "gold"
                           ? "text-gold group-hover:text-dark"
                           : "text-purple group-hover:text-white"
                       }`}
                     />
                   </div>
                   <h3 className="text-xl font-bold text-dark mb-3">
-                    {feature.title}
+                    {pillar.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
-                    {feature.description}
+                    {pillar.description}
                   </p>
                 </div>
               </StaggerItem>
@@ -362,41 +360,40 @@ export default function HomePage() {
             <FadeIn direction="right">
               <div>
                 <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
-                  About Our Church
+                  About Dr. Azemhe Azena
                 </span>
                 <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6 leading-tight">
-                  A Legacy of{" "}
-                  <span className="text-gradient">Faith & Transformation</span>
+                  A Life of{" "}
+                  <span className="text-gradient">Faith & Impact</span>
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  Founded in 2026 by Dr. Azemhe Azena PhD, Turning Point
-                  Gospel Center International represents the culmination of 18
-                  years of dedicated pastoral ministry. Previously serving at
-                  Omega Fire Ministries, Dr. Azena now leads a vibrant
-                  community of believers committed to changing lives through the
-                  power of God&apos;s Word.
+                  Dr. Azemhe Azena is a Christian minister, teacher,
+                  entrepreneur, educationist, public leader and advocate for
+                  human development whose life has been shaped by faith,
+                  service, continuous learning and a desire to make a meaningful
+                  difference in the lives of people.
                 </p>
                 <p className="text-gray-600 mb-8 leading-relaxed">
-                  With a vision to raise agents of transformation, our church
-                  has impacted thousands across 65+ countries through crusades,
-                  conferences, books, and the transformative power of the
-                  Gospel. Dr. Azena is also the President of the William Azemhe
-                  Azena Turning Point Foundation, extending our reach to
-                  humanitarian efforts.
+                  From his early years in Edo State to his years of academic
+                  development, from pastoral leadership to entrepreneurship,
+                  from community engagement to political participation, and
+                  from years of ministry service to the establishment of Turning
+                  Point Gospel Centre International, his story reflects a
+                  continuing pursuit of purpose and positive influence.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href="/about"
                     className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary-dark text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
                   >
-                    Read Our Story
+                    Read His Story
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                   <Link
                     href="/ministries"
                     className="inline-flex items-center justify-center gap-2 bg-cream border-2 border-cream-dark text-dark px-8 py-4 rounded-full font-semibold hover:bg-cream-dark transition-all duration-300"
                   >
-                    Explore Ministries
+                    Explore Ministry
                   </Link>
                 </div>
               </div>
@@ -414,10 +411,10 @@ export default function HomePage() {
           <FadeIn direction="up">
             <div className="text-center mb-16">
               <span className="inline-block text-gold font-semibold text-sm tracking-wider uppercase mb-4">
-                Testimonies of Faith
+                Testimonies of Impact
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                What Our <span className="text-gradient">Members Say</span>
+                Lives <span className="text-gradient">Transformed</span>
               </h2>
             </div>
           </FadeIn>
@@ -494,14 +491,14 @@ export default function HomePage() {
           <FadeIn direction="up">
             <div className="text-center mb-16">
               <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
-                Join Us
+                Upcoming Events
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
-                Upcoming <span className="text-gradient">Events</span>
+                Join the <span className="text-gradient">Journey</span>
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Be part of our vibrant community gatherings and experience
-                God&apos;s presence in a powerful way.
+                Be part of upcoming ministry events, conferences and gatherings
+                led by Dr. Azemhe Azena.
               </p>
             </div>
           </FadeIn>
@@ -592,27 +589,27 @@ export default function HomePage() {
               <Church className="w-16 h-16 text-gold mx-auto mb-6" />
             </Floating>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Be Part of Something{" "}
-              <span className="text-gold">Greater</span>
+              The Journey{" "}
+              <span className="text-gold">Continues</span>
             </h2>
             <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Your generosity helps us reach more souls, build stronger
-              communities, and spread the Gospel across nations. Join us in
-              making a lasting impact.
+              What began as a personal journey has grown into a wider platform
+              of influence. Discover the story, experience the ministry, and
+              witness the impact of Dr. Azemhe Azena.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/give"
+                href="/about"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-gold-light text-dark px-8 py-4 rounded-full text-lg font-bold hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
                 <Heart className="w-5 h-5" />
-                Give Now
+                Discover His Story
               </Link>
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all duration-300"
               >
-                Join Our Church
+                Get in Touch
                 <ArrowUpRight className="w-5 h-5" />
               </Link>
             </div>
