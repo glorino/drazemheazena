@@ -52,7 +52,7 @@ const timeline = [
     title: "Literary Ministry",
     description:
       "Published over 14 books on faith, healing, deliverance and spiritual growth, becoming a bestselling Christian author.",
-    image: "/azenaphd.jpg",
+    image: "/azenabook.jpg",
   },
   {
     year: "2024",

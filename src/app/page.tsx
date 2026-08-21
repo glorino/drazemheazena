@@ -85,7 +85,7 @@ const milestones = [
     year: "2020",
     title: "Literary Ministry",
     description: "Published 14+ books on faith, healing and spiritual growth",
-    image: "/azenaphd.jpg",
+    image: "/azenabook.jpg",
   },
   {
     year: "2024",
