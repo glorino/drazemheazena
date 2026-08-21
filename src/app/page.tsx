@@ -409,13 +409,13 @@ export default function HomePage() {
                       >
                         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 inline-flex items-center gap-5">
                           {milestone.image && (
-                            <div className={`w-28 h-28 rounded-xl overflow-hidden shrink-0 ${index % 2 === 0 ? "order-2" : "order-1"}`}>
+                            <div className={`w-40 h-28 rounded-xl overflow-hidden shrink-0 ${index % 2 === 0 ? "order-2" : "order-1"}`}>
                               <Image
                                 src={milestone.image}
                                 alt={milestone.title}
-                                width={112}
+                                width={160}
                                 height={112}
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover object-top"
                               />
                             </div>
                           )}
