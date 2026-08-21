@@ -38,7 +38,7 @@ const timeline = [
     title: "Ministry Begins",
     description:
       "Joined Omega Fire Ministries as a pastor, beginning a journey of pastoral leadership that would span nearly two decades.",
-    image: "/azenacommunity.jpg",
+    image: "/azenaministry.jpg",
   },
   {
     year: "2015",

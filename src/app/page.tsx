@@ -73,7 +73,7 @@ const milestones = [
     year: "2007",
     title: "Ministry Begins",
     description: "Joined Omega Fire Ministries as a pastor",
-    image: "/azenababy.jpg",
+    image: "/azenaministry.jpg",
   },
   {
     year: "2015",
