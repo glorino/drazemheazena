@@ -73,26 +73,31 @@ const milestones = [
     year: "2007",
     title: "Ministry Begins",
     description: "Joined Omega Fire Ministries as a pastor",
+    image: "/azenayoung.jpg",
   },
   {
     year: "2015",
     title: "Global Crusades",
     description: "Expanded to international ministry across 65+ countries",
+    image: "/azenacommunity.jpg",
   },
   {
     year: "2020",
     title: "Literary Ministry",
     description: "Published 14+ books on faith, healing and spiritual growth",
+    image: "/azenaphd.jpg",
   },
   {
     year: "2024",
     title: "Public Leadership",
     description: "NNPP Governorship Candidate for Edo State",
+    image: "/azenagovernment.jpg",
   },
   {
     year: "2026",
     title: "Turning Point",
     description: "Established Turning Point Gospel Centre International",
+    image: "/azenateam.jpg",
   },
 ];
 
@@ -393,30 +398,43 @@ export default function HomePage() {
                   delay={index * 0.1}
                 >
                   <div
-                    className={`flex items-center gap-8 ${
-                      index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-                    }`}
-                  >
-                    <div
-                      className={`flex-1 ${
-                        index % 2 === 0 ? "text-right" : "text-left"
+                      className={`flex items-center gap-8 ${
+                        index % 2 === 0 ? "flex-row" : "flex-row-reverse"
                       }`}
                     >
-                      <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 inline-block">
-                        <span className="text-gold font-bold text-lg">
-                          {milestone.year}
-                        </span>
-                        <h3 className="text-xl font-bold text-white mt-1">
-                          {milestone.title}
-                        </h3>
-                        <p className="text-gray-400 mt-1">
-                          {milestone.description}
-                        </p>
+                      <div
+                        className={`flex-1 ${
+                          index % 2 === 0 ? "text-right" : "text-left"
+                        }`}
+                      >
+                        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 inline-flex items-center gap-5">
+                          {milestone.image && (
+                            <div className={`w-20 h-20 rounded-xl overflow-hidden shrink-0 ${index % 2 === 0 ? "order-2" : "order-1"}`}>
+                              <Image
+                                src={milestone.image}
+                                alt={milestone.title}
+                                width={80}
+                                height={80}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          )}
+                          <div className={index % 2 === 0 ? "text-right" : "text-left"}>
+                            <span className="text-gold font-bold text-lg">
+                              {milestone.year}
+                            </span>
+                            <h3 className="text-xl font-bold text-white mt-1">
+                              {milestone.title}
+                            </h3>
+                            <p className="text-gray-400 mt-1">
+                              {milestone.description}
+                            </p>
+                          </div>
+                        </div>
                       </div>
+                      <div className="w-4 h-4 bg-gold rounded-full border-4 border-dark shrink-0 z-10" />
+                      <div className="flex-1" />
                     </div>
-                    <div className="w-4 h-4 bg-gold rounded-full border-4 border-dark shrink-0 z-10" />
-                    <div className="flex-1" />
-                  </div>
                 </FadeIn>
               ))}
             </div>

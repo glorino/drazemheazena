@@ -30,6 +30,7 @@ const ministryAreas = [
     description:
       "Powerful, Spirit-led preaching and teaching that transforms lives. Dr. Azena's ministry is characterized by clarity, depth and apostolic fire that draws people into a deeper relationship with Christ.",
     color: "primary",
+    image: "/DSC_3963 copy.jpg.jpeg",
   },
   {
     icon: Globe,
@@ -37,6 +38,7 @@ const ministryAreas = [
     description:
       "International crusades and conferences across 65+ countries, spreading the Gospel with signs, wonders and miraculous testimonies that confirm the power of God's Word.",
     color: "gold",
+    image: "/azenacommunity.jpg",
   },
   {
     icon: BookOpen,
@@ -44,6 +46,7 @@ const ministryAreas = [
     description:
       "14+ published books on faith, healing, deliverance and spiritual growth. Dr. Azena's writings have blessed readers worldwide and established him as a trusted voice in theological teaching.",
     color: "purple",
+    image: "/azenaphd.jpg",
   },
   {
     icon: Users,
@@ -51,6 +54,7 @@ const ministryAreas = [
     description:
       "Raising a generation of believers who are agents of transformation. Through mentorship and discipleship, Dr. Azena equips individuals to fulfill their God-given purpose.",
     color: "primary",
+    image: "/azenateam.jpg",
   },
   {
     icon: Heart,
@@ -58,6 +62,7 @@ const ministryAreas = [
     description:
       "Powerful intercessory prayer and breakthrough sessions. Dr. Azena's prayer ministry has been associated with countless healings, deliverances and life-changing testimonies.",
     color: "gold",
+    image: "/azenamedia.jpg",
   },
   {
     icon: HandHelping,
@@ -65,6 +70,7 @@ const ministryAreas = [
     description:
       "Through the William Azemhe Azena Turning Point Foundation, Dr. Azena champions educational charity, healthcare support, youth training and community development.",
     color: "purple",
+    image: "/azenahumanitarian.jpg",
   },
 ];
 
@@ -149,23 +155,27 @@ export default function MinistriesPage() {
             {ministryAreas.map((area) => (
               <StaggerItem key={area.title}>
                 <div className="bg-cream rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group h-full">
-                  <div
-                    className={`p-8 ${
-                      area.color === "primary"
-                        ? "bg-gradient-to-br from-primary to-primary-dark"
-                        : area.color === "gold"
-                        ? "bg-gradient-to-br from-gold to-gold-light"
-                        : "bg-gradient-to-br from-purple to-purple/80"
-                    }`}
-                  >
-                    <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4">
-                      <area.icon className="w-7 h-7 text-white" />
+                  {area.image && (
+                    <div className="relative h-48 overflow-hidden">
+                      <Image
+                        src={area.image}
+                        alt={area.title}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                      <div className="absolute bottom-4 left-4">
+                        <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                          <area.icon className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-white">
+                  )}
+                  <div className="p-8">
+                    <h3 className="text-2xl font-bold text-dark mb-3 group-hover:text-primary transition-colors">
                       {area.title}
                     </h3>
-                  </div>
-                  <div className="p-8">
                     <p className="text-gray-600 leading-relaxed">
                       {area.description}
                     </p>

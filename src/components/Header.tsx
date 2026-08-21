@@ -80,7 +80,7 @@ export default function Header() {
               <div className="relative">
                 <div className="w-14 h-14 rounded-full overflow-hidden group-hover:scale-110 transition-transform duration-300 border-2 border-gold/30">
                   <Image
-                    src="/logo.png"
+                    src="/logo.svg"
                     alt="Dr. Azemhe Azena"
                     width={56}
                     height={56}

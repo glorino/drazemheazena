@@ -31,36 +31,42 @@ const timeline = [
     title: "Born in Okpella",
     description:
       "Born in Okpella, Edo State, Nigeria. Raised in a environment that shaped his values of faith, hard work and service to others.",
+    image: "/azenayoung.jpg",
   },
   {
     year: "2007",
     title: "Ministry Begins",
     description:
       "Joined Omega Fire Ministries as a pastor, beginning a journey of pastoral leadership that would span nearly two decades.",
+    image: "/azenacommunity.jpg",
   },
   {
     year: "2015",
     title: "Global Crusades",
     description:
       "Expanded ministry to international crusades and conferences, traveling to over 65 countries to preach the Gospel.",
+    image: "/azenaleadership.jpg",
   },
   {
     year: "2020",
     title: "Literary Ministry",
     description:
       "Published over 14 books on faith, healing, deliverance and spiritual growth, becoming a bestselling Christian author.",
+    image: "/azenaphd.jpg",
   },
   {
     year: "2024",
     title: "Public Leadership",
     description:
       "Emerged as the NNPP Governorship Candidate for Edo State, campaigning on good governance, education and youth empowerment.",
+    image: "/azenagovernment.jpg",
   },
   {
     year: "2026",
     title: "Turning Point",
     description:
       "Established Turning Point Gospel Centre International, a new expression of his Christian ministry and service.",
+    image: "/azenateam.jpg",
   },
 ];
 
@@ -187,7 +193,7 @@ export default function AboutPage() {
               <div className="relative">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/IMG-20260802-WA0133.jpg.jpeg"
+                    src="/azenamedia.jpg"
                     alt="Dr. Azemhe Azena"
                     width={600}
                     height={700}
@@ -308,30 +314,43 @@ export default function AboutPage() {
                   delay={index * 0.1}
                 >
                   <div
-                    className={`flex items-center gap-8 ${
-                      index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-                    }`}
-                  >
-                    <div
-                      className={`flex-1 ${
-                        index % 2 === 0 ? "text-right" : "text-left"
+                      className={`flex items-center gap-8 ${
+                        index % 2 === 0 ? "flex-row" : "flex-row-reverse"
                       }`}
                     >
-                      <div className="bg-white rounded-2xl shadow-lg p-6 inline-block">
-                        <span className="text-primary font-bold text-lg">
-                          {item.year}
-                        </span>
-                        <h3 className="text-xl font-bold text-dark mt-1">
-                          {item.title}
-                        </h3>
-                        <p className="text-gray-600 mt-1">
-                          {item.description}
-                        </p>
+                      <div
+                        className={`flex-1 ${
+                          index % 2 === 0 ? "text-right" : "text-left"
+                        }`}
+                      >
+                        <div className="bg-white rounded-2xl shadow-lg p-6 inline-flex items-center gap-5">
+                          {item.image && (
+                            <div className={`w-20 h-20 rounded-xl overflow-hidden shrink-0 ${index % 2 === 0 ? "order-2" : "order-1"}`}>
+                              <Image
+                                src={item.image}
+                                alt={item.title}
+                                width={80}
+                                height={80}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          )}
+                          <div className={index % 2 === 0 ? "text-right" : "text-left"}>
+                            <span className="text-primary font-bold text-lg">
+                              {item.year}
+                            </span>
+                            <h3 className="text-xl font-bold text-dark mt-1">
+                              {item.title}
+                            </h3>
+                            <p className="text-gray-600 mt-1">
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
                       </div>
+                      <div className="w-4 h-4 bg-primary rounded-full border-4 border-cream shrink-0 z-10" />
+                      <div className="flex-1" />
                     </div>
-                    <div className="w-4 h-4 bg-primary rounded-full border-4 border-cream shrink-0 z-10" />
-                    <div className="flex-1" />
-                  </div>
                 </FadeIn>
               ))}
             </div>
@@ -357,23 +376,43 @@ export default function AboutPage() {
             </div>
           </FadeIn>
 
-          <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {education.map((edu) => (
-              <StaggerItem key={edu.institution}>
-                <div className="bg-cream rounded-2xl p-6 flex items-start gap-4 hover:shadow-lg transition-all duration-300">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-                    <edu.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-dark">
-                      {edu.institution}
-                    </h3>
-                    <p className="text-gray-600 text-sm mt-1">{edu.field}</p>
-                  </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+            <FadeIn direction="left">
+              <div className="relative">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/azenaphd.jpg"
+                    alt="Dr. Azemhe Azena - PhD Graduation"
+                    width={500}
+                    height={600}
+                    className="object-cover w-full h-[450px]"
+                  />
                 </div>
-              </StaggerItem>
-            ))}
-          </StaggerChildren>
+                <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-gold to-gold-light text-dark p-5 rounded-2xl shadow-xl">
+                  <div className="text-3xl font-bold">PhD</div>
+                  <div className="text-sm opacity-80">Doctor of Philosophy</div>
+                </div>
+              </div>
+            </FadeIn>
+
+            <StaggerChildren className="space-y-4">
+              {education.map((edu) => (
+                <StaggerItem key={edu.institution}>
+                  <div className="bg-cream rounded-2xl p-6 flex items-start gap-4 hover:shadow-lg transition-all duration-300">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
+                      <edu.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-dark">
+                        {edu.institution}
+                      </h3>
+                      <p className="text-gray-600 text-sm mt-1">{edu.field}</p>
+                    </div>
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerChildren>
+          </div>
         </div>
       </section>
 
@@ -476,7 +515,7 @@ export default function AboutPage() {
               <div className="relative">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/IMG-20260802-WA0134.jpg.jpeg"
+                    src="/azenafamily.jpg"
                     alt="Pastor Precious Azemhe Azena"
                     width={600}
                     height={700}
