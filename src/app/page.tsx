@@ -79,7 +79,7 @@ const milestones = [
     year: "2015",
     title: "Global Crusades",
     description: "Expanded to international ministry across 65+ countries",
-    image: "/azenacommunity.jpg",
+    image: "/azenaglobal.jpg",
   },
   {
     year: "2020",

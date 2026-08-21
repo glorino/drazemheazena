@@ -45,7 +45,7 @@ const timeline = [
     title: "Global Crusades",
     description:
       "Expanded ministry to international crusades and conferences, traveling to over 65 countries to preach the Gospel.",
-    image: "/azenaleadership.jpg",
+    image: "/azenaglobal.jpg",
   },
   {
     year: "2020",
