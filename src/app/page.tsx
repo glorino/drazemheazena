@@ -97,7 +97,7 @@ const milestones = [
     year: "2026",
     title: "Turning Point",
     description: "Established Turning Point Gospel Centre International",
-    image: "/azenateam.jpg",
+    image: "/azenamedia.jpg",
   },
 ];
 
