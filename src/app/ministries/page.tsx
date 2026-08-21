@@ -91,7 +91,7 @@ export default function MinistriesPage() {
             src="/DSC_3961 copy.jpg.jpeg"
             alt="Dr. Azemhe Azena ministry"
             fill
-            className="object-cover object-top"
+            className="object-cover object-[50%_15%]"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/85 to-dark/70" />

@@ -162,7 +162,7 @@ export default function AboutPage() {
             src="/DSC_3963 copy.jpg.jpeg"
             alt="Dr. Azemhe Azena"
             fill
-            className="object-cover object-top"
+            className="object-cover object-[50%_15%]"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/85 to-dark/70" />

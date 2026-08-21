@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "humanitarian",
   ],
   icons: {
-    icon: "/logo.png",
+    icon: "/logo.svg",
   },
   openGraph: {
     title: "Dr. Azemhe Azena | Faith, Leadership & Impact",
