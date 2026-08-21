@@ -91,7 +91,7 @@ const milestones = [
     year: "2024",
     title: "Public Leadership",
     description: "NNPP Governorship Candidate for Edo State",
-    image: "/azenagovernment.jpg",
+    image: "/azenaparty.jpg",
   },
   {
     year: "2026",

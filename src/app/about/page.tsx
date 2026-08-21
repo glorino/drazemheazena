@@ -59,7 +59,7 @@ const timeline = [
     title: "Public Leadership",
     description:
       "Emerged as the NNPP Governorship Candidate for Edo State, campaigning on good governance, education and youth empowerment.",
-    image: "/azenagovernment.jpg",
+    image: "/azenaparty.jpg",
   },
   {
     year: "2026",
