@@ -325,12 +325,12 @@ export default function AboutPage() {
                       >
                         <div className="bg-white rounded-2xl shadow-lg p-6 inline-flex items-center gap-5">
                           {item.image && (
-                            <div className={`w-20 h-20 rounded-xl overflow-hidden shrink-0 ${index % 2 === 0 ? "order-2" : "order-1"}`}>
+                            <div className={`w-28 h-28 rounded-xl overflow-hidden shrink-0 ${index % 2 === 0 ? "order-2" : "order-1"}`}>
                               <Image
                                 src={item.image}
                                 alt={item.title}
-                                width={80}
-                                height={80}
+                                width={112}
+                                height={112}
                                 className="w-full h-full object-cover"
                               />
                             </div>
