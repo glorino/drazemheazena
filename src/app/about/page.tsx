@@ -66,7 +66,7 @@ const timeline = [
     title: "Turning Point",
     description:
       "Established Turning Point Gospel Centre International, a new expression of his Christian ministry and service.",
-    image: "/azenamedia.jpg",
+    image: "/azenaturn.jpg",
   },
 ];
 
