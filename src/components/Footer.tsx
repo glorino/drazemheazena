@@ -21,6 +21,7 @@ const quickLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/ministries", label: "Ministry" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/sermons", label: "Media" },
   { href: "/contact", label: "Contact" },
 ];
