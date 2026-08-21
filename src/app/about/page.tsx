@@ -31,7 +31,7 @@ const timeline = [
     title: "Born in Okpella",
     description:
       "Born in Okpella, Edo State, Nigeria. Raised in a environment that shaped his values of faith, hard work and service to others.",
-    image: "/azenayoung.jpg",
+    image: "/azenababy.jpg",
   },
   {
     year: "2007",
