@@ -30,65 +30,70 @@ const timeline = [
     year: "1979",
     title: "Born in Okpella",
     description:
-      "Born in Okpella, Edo State, Nigeria. Raised in a environment that shaped his values of faith, hard work and service to others.",
+      "Born on 25th December 1979 in Okpella, Estako East Local Government Area of Edo State, Nigeria, to Mr. and Mrs. Beatrice Williams Azemhe Azena. The fifth child among his siblings.",
     image: "/azenababy.jpg",
   },
   {
     year: "2007",
     title: "Ministry Begins",
     description:
-      "Joined Omega Fire Ministries as a pastor, beginning a journey of pastoral leadership that would span nearly two decades.",
+      "Joined Omega Fire Ministries as a pastor, beginning a journey of pastoral leadership that would span nearly two decades without blemish.",
     image: "/azenaministry.jpg",
   },
   {
     year: "2015",
     title: "Global Crusades",
     description:
-      "Expanded ministry to international crusades and conferences, traveling to over 65 countries to preach the Gospel.",
+      "Expanded ministry to international crusades and conferences, preaching the Gospel in over 75 nations across the continent and beyond.",
     image: "/azenaglobal.jpg",
   },
   {
     year: "2020",
     title: "Literary Ministry",
     description:
-      "Published over 14 books on faith, healing, deliverance and spiritual growth, becoming a bestselling Christian author.",
+      "Published over 17 books on faith, healing, deliverance and spiritual growth, including titles like 'Victory over Foundational Battles' and 'Thinking Forward'.",
     image: "/azenabook.jpg",
   },
   {
-    year: "2024",
+    year: "2023",
     title: "Public Leadership",
     description:
-      "Emerged as the NNPP Governorship Candidate for Edo State, campaigning on good governance, education and youth empowerment.",
+      "Contested for the position of Governor of Edo State under the New Nigeria People's Party (NNPP), campaigning on good governance, education and youth empowerment.",
     image: "/azenaparty.jpg",
   },
   {
     year: "2026",
     title: "Turning Point",
     description:
-      "Established Turning Point Gospel Centre International, a new expression of his Christian ministry and service.",
+      "Founded a Bible Institute and established Turning Point Gospel Centre International, a new expression of his Christian ministry and service.",
     image: "/azenaturn.jpg",
   },
 ];
 
 const education = [
   {
-    institution: "Federal Polytechnic, Auchi",
-    field: "Mass Communication",
+    institution: "Eveva Primary School, Okpella",
+    field: "Primary Education",
     icon: GraduationCap,
   },
   {
-    institution: "Omega Bible Institute",
-    field: "Theology",
+    institution: "Okpella Comprehensive High School",
+    field: "Secondary Education",
+    icon: GraduationCap,
+  },
+  {
+    institution: "Federal Polytechnic, Auchi",
+    field: "National Diploma & Higher National Diploma in Mass Communication",
     icon: BookOpen,
   },
   {
     institution: "Bethel University College of Biblical Studies",
-    field: "Religious Studies & Christian Philosophy",
+    field: "Associate & Bachelor in Theology, PhD in Christian Philosophy",
     icon: BookMarked,
   },
   {
     institution: "Ambrose Alli University, Ekpoma",
-    field: "Law",
+    field: "LL.B in Law",
     icon: Shield,
   },
 ];
@@ -177,9 +182,11 @@ export default function AboutPage() {
               Dr. Azemhe Azena <span className="text-gradient">PhD</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl leading-relaxed">
-              A life of faith, leadership, learning, enterprise and service —
-              continually expanding its influence from the individual to the
-              family, from the church to society.
+              A voice of Faith. A leader of Impact. A Builder of People.
+              Christian minister, teacher, entrepreneur, educationalist,
+              lawyer in equity, advocate of peace — whose life has been
+              shaped by faith, service and a desire to make meaningful
+              difference in the society.
             </p>
           </FadeIn>
         </div>
@@ -222,48 +229,51 @@ export default function AboutPage() {
                 </h2>
                 <div className="space-y-4 text-gray-600 leading-relaxed mb-8">
                   <p>
-                    Dr. Azemhe Azena is a Christian minister, teacher,
-                    entrepreneur, educationist, family man and public leader
-                    whose life has developed through a continuing journey of
-                    faith, learning, service and leadership.
+                    Dr. Azemhe Azena was born on 25th December 1979 in Okpella,
+                    Estako East Local Government Area of Edo State, Nigeria, to
+                    Mr. and Mrs. Beatrice Williams Azemhe Azena, who hail from
+                    Okpekpe clan in Estako East. He is the fifth child among
+                    his siblings.
                   </p>
                   <p>
-                    Rooted in Edo State, his story is one of personal
-                    development and expanding responsibility. His early life and
-                    educational experiences provided the foundation for a journey
-                    that would eventually span Christian ministry, academia,
-                    entrepreneurship, education, humanitarian service and public
-                    leadership.
+                    A Christian minister, teacher, entrepreneur, educationist,
+                    lawyer in equity, advocate of peace and public leader whose
+                    life has been shaped by faith, service and a desire to make
+                    meaningful difference in the society.
                   </p>
                   <p>
-                    His commitment to education has remained a recurring feature
-                    of his life. His academic journey includes studies in Mass
-                    Communication, Theology, Religious Studies, Christian
-                    Philosophy and Law — demonstrating his commitment to lifelong
-                    learning even after establishing himself as a pastor,
-                    entrepreneur and public figure.
+                    From humble beginnings as a bike rider for almost a decade,
+                    a wheelbarrow pusher and a trained camera personnel, he
+                    pursued his vision with courage and consistency, overcoming
+                    challenges and remaining committed to his calling. His
+                    journey demonstrates that humble beginnings do not determine
+                    the height of one&apos;s destiny.
                   </p>
                   <p>
                     Over his 18-year ministry journey, Dr. Azena has traveled to
-                    more than 65 countries, held numerous crusades and
+                    more than 75 nations, held numerous crusades and
                     conferences, and witnessed countless healings, deliverances
-                    and life-changing testimonies. He has authored 14+ books that
-                    have blessed readers worldwide.
+                    and life-changing testimonies. Having served under Omega
+                    Fire Ministry for almost two decades without blemish, he
+                    prestigiously resigned as a Faithful Steward and founded a
+                    Bible Institute under Turning Point Gospel Centre.
                   </p>
                   <p>
-                    Beyond the pulpit, Dr. Azena is the President of the William
-                    Azemhe Azena Turning Point Foundation, a humanitarian
-                    organization dedicated to uplifting communities through
-                    education, healthcare and social empowerment programs.
+                    He has authored 17+ books including{' '}
+                    <em>The Danger of Depending on a Man</em>,{' '}
+                    <em>Victory over Foundational Battles</em>,{' '}
+                    <em>Thinking Forward</em>,{' '}
+                    <em>Life is a Market</em>, and{' '}
+                    <em>Oh Lord Guide my Decision</em>.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   <div className="bg-cream rounded-xl p-4">
-                    <div className="text-3xl font-bold text-primary">65+</div>
-                    <div className="text-sm text-gray-600">Countries Visited</div>
+                    <div className="text-3xl font-bold text-primary">75+</div>
+                    <div className="text-sm text-gray-600">Countries Reached</div>
                   </div>
                   <div className="bg-cream rounded-xl p-4">
-                    <div className="text-3xl font-bold text-primary">14+</div>
+                    <div className="text-3xl font-bold text-primary">17+</div>
                     <div className="text-sm text-gray-600">Books Published</div>
                   </div>
                   <div className="bg-cream rounded-xl p-4">
@@ -276,8 +286,8 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <p className="text-gray-600 italic">
-                  &ldquo;Married to the beautiful Pastor Mrs. Uwazota Precious,
-                  their union stands as a testament to God&apos;s faithfulness and
+                  &ldquo;Married to Rev. Mrs. Azena Precious Igiebor, their
+                  union stands as a testament to God&apos;s faithfulness and
                   is a blessing to the Body of Christ.&rdquo;
                 </p>
               </div>
@@ -463,6 +473,88 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Awards & Recognition */}
+      <section className="py-24 bg-cream">
+        <div className="max-w-7xl mx-auto px-4">
+          <FadeIn direction="up">
+            <div className="text-center mb-16">
+              <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
+                Awards & Recognition
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
+                Honours & <span className="text-gradient">Distinctions</span>
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Over the years, Dr. Azemhe Azena&apos;s contributions to faith,
+                leadership, humanitarian service and society have earned him
+                several international and local awards and recognitions.
+              </p>
+            </div>
+          </FadeIn>
+
+          <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <StaggerItem>
+              <div className="bg-white rounded-2xl p-6 shadow-lg flex items-start gap-4 hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center shrink-0">
+                  <Award className="w-6 h-6 text-gold" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-dark">Justice of the Peace</h3>
+                  <p className="text-gray-600 text-sm mt-1">
+                    Honour conferred by the Government of Nigeria in recognition
+                    of his contributions to society and peacebuilding.
+                  </p>
+                </div>
+              </div>
+            </StaggerItem>
+            <StaggerItem>
+              <div className="bg-white rounded-2xl p-6 shadow-lg flex items-start gap-4 hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
+                  <Globe className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-dark">Let There Be Peace March</h3>
+                  <p className="text-gray-600 text-sm mt-1">
+                    Core organiser of the annual global outreach &quot;Let There
+                    Be Peace Match&quot; which has impacted individuals and
+                    caused positive change across communities.
+                  </p>
+                </div>
+              </div>
+            </StaggerItem>
+            <StaggerItem>
+              <div className="bg-white rounded-2xl p-6 shadow-lg flex items-start gap-4 hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center shrink-0">
+                  <BookOpen className="w-6 h-6 text-purple-600" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-dark">Bestselling Christian Author</h3>
+                  <p className="text-gray-600 text-sm mt-1">
+                    Author of 17+ books on faith, healing, deliverance and
+                    spiritual growth, with readers across the world.
+                  </p>
+                </div>
+              </div>
+            </StaggerItem>
+            <StaggerItem>
+              <div className="bg-white rounded-2xl p-6 shadow-lg flex items-start gap-4 hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center shrink-0">
+                  <HandHelping className="w-6 h-6 text-emerald-600" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-dark">Humanitarian Impact</h3>
+                  <p className="text-gray-600 text-sm mt-1">
+                    Recognition from various communities and organisations for
+                    youth empowerment, scholarships, medical outreach and
+                    community development through the Turning Point Foundation.
+                  </p>
+                </div>
+              </div>
+            </StaggerItem>
+          </StaggerChildren>
+        </div>
+      </section>
+
       {/* Personal Values */}
       <section className="py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4">
@@ -544,18 +636,28 @@ export default function AboutPage() {
                 </h2>
                 <div className="space-y-4 text-gray-600 leading-relaxed">
                   <p>
-                    Dr. Azemhe Azena is married to Pastor Precious Azemhe Azena,
-                    with whom he shares a life of family, ministry and service.
-                    Their marriage has continued through different seasons of
-                    public responsibility, and they are blessed with five
-                    children.
+                    Dr. Azemhe Azena is a devoted husband to Rev. Mrs. Azena
+                    Precious Igiebor and father of five children. Their family
+                    remains an important part of his journey, values and
+                    commitment to building a meaningful legacy for future
+                    generations.
                   </p>
                   <p>
-                    Pastor Precious has also been associated with ministry
+                    Rev. Mrs. Precious has also been associated with ministry
                     leadership and educational administration, standing alongside
                     Dr. Azena in his various endeavors.
                   </p>
-                  <p>
+                  <div className="bg-cream rounded-2xl p-6 mt-6">
+                    <h4 className="font-bold text-dark mb-3">Their Children:</h4>
+                    <ol className="space-y-2 text-sm list-decimal list-inside">
+                      <li>Azemhe Azena Immaculate Scholar Azorna</li>
+                      <li>Azemhe Azena Evangelina Azemheshionagie</li>
+                      <li>Azemhe Azena Fulfillment Azonagie</li>
+                      <li>Azemhe Azena Special Azemhene</li>
+                      <li>Azemhe Azena Goodname Faithfulness Azodagiemhe</li>
+                    </ol>
+                  </div>
+                  <p className="italic">
                     Their union stands as a testament to God&apos;s faithfulness
                     and is a blessing to all who know them.
                   </p>

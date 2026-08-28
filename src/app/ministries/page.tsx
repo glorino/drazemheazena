@@ -36,7 +36,7 @@ const ministryAreas = [
     icon: Globe,
     title: "Global Evangelism",
     description:
-      "International crusades and conferences across 65+ countries, spreading the Gospel with signs, wonders and miraculous testimonies that confirm the power of God's Word.",
+      "International crusades and conferences across 75+ nations, spreading the Gospel with signs, wonders and miraculous testimonies that confirm the power of God's Word.",
     color: "gold",
     image: "/azenacommunity.jpg",
   },
@@ -44,15 +44,15 @@ const ministryAreas = [
     icon: BookOpen,
     title: "Literary Ministry",
     description:
-      "14+ published books on faith, healing, deliverance and spiritual growth. Dr. Azena's writings have blessed readers worldwide and established him as a trusted voice in theological teaching.",
+      "17+ published books on faith, healing, deliverance and spiritual growth, including 'Victory over Foundational Battles', 'Thinking Forward', 'Life is a Market' and 'Oh Lord Guide my Decision'.",
     color: "purple",
-    image: "/azenaphd.jpg",
+    image: "/azenabook.jpg",
   },
   {
     icon: Users,
     title: "Mentorship & Discipleship",
     description:
-      "Raising a generation of believers who are agents of transformation. Through mentorship and discipleship, Dr. Azena equips individuals to fulfill their God-given purpose.",
+      "Raising a generation of believers who are agents of transformation. Through the Bible Institute under Turning Point Gospel Centre, Dr. Azena equips individuals to fulfill their God-given purpose.",
     color: "primary",
     image: "/azenateam.jpg",
   },
@@ -68,16 +68,16 @@ const ministryAreas = [
     icon: HandHelping,
     title: "Humanitarian Service",
     description:
-      "Through the William Azemhe Azena Turning Point Foundation, Dr. Azena champions educational charity, healthcare support, youth training and community development.",
+      "Through the William Azemhe Azena Turning Point Foundation, Dr. Azena champions scholarships, community development, medical outreach, and the annual 'Let There Be Peace Match' global outreach.",
     color: "purple",
     image: "/azenahumanitarian.jpg",
   },
 ];
 
 const impactStats = [
-  { value: "65+", label: "Countries Reached" },
+  { value: "75+", label: "Countries Reached" },
   { value: "100K+", label: "Lives Impacted" },
-  { value: "14+", label: "Books Written" },
+  { value: "17+", label: "Books Written" },
   { value: "18+", label: "Years Active" },
 ];
 
@@ -216,6 +216,157 @@ export default function MinistriesPage() {
               </StaggerItem>
             ))}
           </StaggerChildren>
+        </div>
+      </section>
+
+      {/* Tele-Evangelism Schedule */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <FadeIn direction="up">
+            <div className="text-center mb-12">
+              <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
+                On Air
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
+                Tele-<span className="text-gradient">Evangelism</span> Schedule
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Dr. Azena broadcasts the Gospel across radio and television
+                stations on the following days and times.
+              </p>
+            </div>
+          </FadeIn>
+
+          <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+            {[
+              { station: "NTA", day: "Every Wednesday", time: "7:30 PM", type: "TV" },
+              { station: "SPEED FM", day: "Every Saturday", time: "9:00 AM - 9:30 AM", type: "Radio" },
+              { station: "BRONZE FM", day: "Every Saturday", time: "6:30 PM - 7:00 PM", type: "Radio" },
+              { station: "B-SIDE FM", day: "Every Thursday", time: "6:30 PM - 7:00 PM", type: "Radio" },
+              { station: "EBS", day: "Every Tuesday", time: "6:30 PM", type: "TV" },
+            ].map((schedule) => (
+              <StaggerItem key={schedule.station}>
+                <div className="bg-cream rounded-xl p-5 flex items-center gap-4 hover:shadow-lg transition-all duration-300">
+                  <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center shrink-0">
+                    {schedule.type === "TV" ? (
+                      <Play className="w-6 h-6 text-white" />
+                    ) : (
+                      <BookOpen className="w-6 h-6 text-white" />
+                    )}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-bold text-dark">{schedule.station}</h3>
+                    <p className="text-sm text-gray-600">
+                      {schedule.day} • {schedule.time}
+                    </p>
+                  </div>
+                  <span className="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
+                    {schedule.type}
+                  </span>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerChildren>
+        </div>
+      </section>
+
+      {/* Enterprise */}
+      <section className="py-20 bg-cream">
+        <div className="max-w-5xl mx-auto px-4">
+          <FadeIn direction="up">
+            <div className="text-center mb-12">
+              <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
+                Enterprise
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
+                Building <span className="text-gradient">Institutions</span>
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Entrepreneurship across education, hospitality, real estate and
+                media — building institutions that create lasting value.
+              </p>
+            </div>
+          </FadeIn>
+
+          <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { name: "Evangel Ultimate Premium School", sector: "Education" },
+              { name: "Evangel Ultimate Hotel", sector: "Hospitality" },
+              { name: "Champion Multi-Purpose Projects", sector: "Real Estate" },
+              { name: "Turning Point Media", sector: "Media" },
+            ].map((biz) => (
+              <StaggerItem key={biz.name}>
+                <div className="bg-white rounded-2xl p-6 shadow-lg flex items-center gap-4 hover:shadow-xl transition-all duration-300">
+                  <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center shrink-0">
+                    <Landmark className="w-6 h-6 text-gold" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-dark">{biz.name}</h3>
+                    <p className="text-sm text-gray-600">{biz.sector}</p>
+                  </div>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerChildren>
+        </div>
+      </section>
+
+      {/* Foundation */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <FadeIn direction="up">
+            <div className="text-center mb-12">
+              <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
+                Foundation
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
+                Turning Point <span className="text-gradient">Foundation</span>
+              </h2>
+            </div>
+          </FadeIn>
+
+          <FadeIn direction="up" delay={0.1}>
+            <div className="bg-gradient-to-br from-primary to-primary-dark rounded-3xl p-8 md:p-12 text-white">
+              <h3 className="text-2xl font-bold mb-4">
+                William Azemhe Azena Turning Point Foundation
+              </h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <p className="text-white/80 leading-relaxed">
+                    Dr. Azena is the President and Founder of the William
+                    Azemhe Azena Turning Point Foundation, a humanitarian
+                    organisation dedicated to uplifting communities.
+                  </p>
+                  <p className="text-white/80 leading-relaxed">
+                    The foundation provides scholarships, aids community
+                    development, and empowers medical outreach programmes to
+                    both rural and urban settlements.
+                  </p>
+                </div>
+                <div className="space-y-3">
+                  <h4 className="font-bold text-gold">Key Programmes:</h4>
+                  <ul className="space-y-2 text-white/80">
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 bg-gold rounded-full mt-2 shrink-0" />
+                      Annual Renunciation Programme — helping offenders renounce amicably and turn a new life
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 bg-gold rounded-full mt-2 shrink-0" />
+                      Scholarship programmes for underprivileged students
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 bg-gold rounded-full mt-2 shrink-0" />
+                      Medical outreach to rural and urban communities
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 bg-gold rounded-full mt-2 shrink-0" />
+                      &quot;Let There Be Peace Match&quot; — annual global peace outreach
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 

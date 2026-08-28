@@ -167,11 +167,11 @@ export default function Footer() {
                 <span>WhatsApp</span>
               </a>
               <a
-                href="mailto:support@turningpointgospelcentre.com"
+                href="mailto:turningpointgospelcentre@gmail.com"
                 className="flex items-center gap-3 text-gray-400 hover:text-gold transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                <span>support@turningpointgospelcentre.com</span>
+                <span>turningpointgospelcentre@gmail.com</span>
               </a>
               <div className="flex items-start gap-3 text-gray-400">
                 <MapPin className="w-4 h-4 mt-1" />

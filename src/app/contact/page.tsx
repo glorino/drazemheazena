@@ -41,24 +41,33 @@ const ChurchMap = dynamic(() => import("@/components/ChurchMap"), {
 const contactInfo = [
   {
     icon: MapPin,
-    title: "Location",
+    title: "Ministry Address",
     details: [
       "16 Irabor Street off Ewan Street",
-      "Upper Mission Extension, Uteh, Benin City, Edo State, Nigeria",
+      "Upper Mission Extension, Uteh, Ikpoba Okha LGA, Benin City, Edo State",
+    ],
+    link: "https://maps.google.com",
+  },
+  {
+    icon: MapPin,
+    title: "Foundation Address",
+    details: [
+      "Plot 8, Aduwawa",
+      "Benin City, Edo State, Nigeria",
     ],
     link: "https://maps.google.com",
   },
   {
     icon: Phone,
     title: "Phone",
-    details: ["0810 765 9761"],
+    details: ["0810 765 9761", "090 9258 9071", "080 6497 001"],
     link: "tel:08107659761",
   },
   {
     icon: Mail,
     title: "Email",
-    details: ["support@turningpointgospelcentre.com"],
-    link: "mailto:support@turningpointgospelcentre.com",
+    details: ["turningpointgospelcentre@gmail.com"],
+    link: "mailto:turningpointgospelcentre@gmail.com",
   },
 ];
 

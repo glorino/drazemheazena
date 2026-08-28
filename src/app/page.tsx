@@ -31,9 +31,9 @@ import {
 import { useState, useEffect } from "react";
 
 const stats = [
-  { icon: Globe, value: "65+", label: "Countries Reached" },
+  { icon: Globe, value: "75+", label: "Countries Reached" },
   { icon: Heart, value: "100K+", label: "Lives Changed" },
-  { icon: BookMarked, value: "14+", label: "Books Published" },
+  { icon: BookMarked, value: "17+", label: "Books Published" },
   { icon: Clock, value: "18+", label: "Years of Ministry" },
 ];
 
@@ -78,17 +78,17 @@ const milestones = [
   {
     year: "2015",
     title: "Global Crusades",
-    description: "Expanded to international ministry across 65+ countries",
+    description: "Expanded to international ministry across 75+ nations",
     image: "/azenaglobal.jpg",
   },
   {
     year: "2020",
     title: "Literary Ministry",
-    description: "Published 14+ books on faith, healing and spiritual growth",
+    description: "Published 17+ books on faith, healing and spiritual growth",
     image: "/azenabook.jpg",
   },
   {
-    year: "2024",
+    year: "2023",
     title: "Public Leadership",
     description: "NNPP Governorship Candidate for Edo State",
     image: "/azenaparty.jpg",
