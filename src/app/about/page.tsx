@@ -555,6 +555,364 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Complete Profile */}
+      <section id="profile" className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <FadeIn direction="up">
+            <div className="text-center mb-16">
+              <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
+                Full Profile
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
+                The Complete <span className="text-gradient">Profile</span>
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                A comprehensive overview of Dr. Azemhe Azena&apos;s life,
+                ministry, education, enterprise and impact.
+              </p>
+            </div>
+          </FadeIn>
+
+          <div className="space-y-12">
+            {/* Biography */}
+            <FadeIn direction="up">
+              <div className="bg-cream rounded-3xl p-8 md:p-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+                    <Users className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-dark">Biography</h3>
+                </div>
+                <div className="space-y-4 text-gray-600 leading-relaxed">
+                  <p>
+                    Dr. Azemhe Azena was born on 25 December 1979 in Okpela,
+                    Estako East Local Government Area of Edo State, Nigeria. He
+                    was born to Mr. and Mrs. Beatrice Williams Azemhe Azena, who
+                    hail from Okpekpe clan in Estako East Local Government Area
+                    of Edo State.
+                  </p>
+                  <p>
+                    He is the fifth child among his siblings and has distinguished
+                    himself through a life dedicated to faith, leadership,
+                    service, entrepreneurship and humanitarian impact.
+                  </p>
+                  <p>
+                    Dr. Azemhe Azena is a seasoned pastor, global evangelist,
+                    author, entrepreneur and philanthropist. Over the years, his
+                    ministry and leadership have touched numerous lives across
+                    different communities and beyond.
+                  </p>
+                  <p>
+                    Through his commitment to the advancement of the Gospel and
+                    the wellbeing of humanity, he has continued to demonstrate
+                    resilience, compassion, vision and dedication to service. His
+                    journey reflects a strong commitment to faith and the pursuit
+                    of positive change, particularly through spiritual leadership,
+                    community development and humanitarian initiatives.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Ministry & Leadership */}
+            <FadeIn direction="up">
+              <div className="bg-cream rounded-3xl p-8 md:p-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-gold rounded-xl flex items-center justify-center">
+                    <Cross className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-dark">Ministry & Leadership</h3>
+                </div>
+                <div className="space-y-4 text-gray-600 leading-relaxed">
+                  <p>
+                    He is a Christian minister, preacher, teacher, founder of
+                    Turning Point Gospel Centre, a tele-evangelist who preaches
+                    on radio and television stations:
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 my-4">
+                    <div className="bg-white rounded-xl p-4">
+                      <p className="font-semibold text-dark">NTA</p>
+                      <p className="text-sm text-gray-600">Every Wednesday @ 7:30 PM</p>
+                    </div>
+                    <div className="bg-white rounded-xl p-4">
+                      <p className="font-semibold text-dark">SPEED FM</p>
+                      <p className="text-sm text-gray-600">Every Saturday @ 9:00 AM - 9:30 AM</p>
+                    </div>
+                    <div className="bg-white rounded-xl p-4">
+                      <p className="font-semibold text-dark">BRONZE FM</p>
+                      <p className="text-sm text-gray-600">Every Saturday @ 6:30 PM - 7:00 PM</p>
+                    </div>
+                    <div className="bg-white rounded-xl p-4">
+                      <p className="font-semibold text-dark">B-SIDE FM</p>
+                      <p className="text-sm text-gray-600">Every Thursday @ 6:30 PM - 7:00 PM</p>
+                    </div>
+                    <div className="bg-white rounded-xl p-4">
+                      <p className="font-semibold text-dark">EBS</p>
+                      <p className="text-sm text-gray-600">Every Tuesday @ 6:30 PM</p>
+                    </div>
+                  </div>
+                  <p>
+                    As a lover of the Gospel, he has randomly preached the Gospel
+                    in over 75 nations, taking the Gospel of our Lord Jesus Christ
+                    across the continent. Having served under Omega Fire Ministry
+                    for almost two decades without blemish, prestigiously resigned
+                    as a Faithful Steward, with his undying love for God founded
+                    a Bible Institute under Turning Point Gospel Centre which has
+                    graduated several Stewards.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Education */}
+            <FadeIn direction="up">
+              <div className="bg-cream rounded-3xl p-8 md:p-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
+                    <GraduationCap className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-dark">Education</h3>
+                </div>
+                <div className="space-y-4 text-gray-600 leading-relaxed">
+                  <p>
+                    He attended his Primary Education at Eveva Primary School,
+                    his Secondary School at Okpella Comprehensive High School,
+                    wrote his West Africa Examination at Aggassa Local Government
+                    School Okene Kogi State.
+                  </p>
+                  <p>
+                    He furthered his Education by attaining his National Diploma
+                    and Higher National Diploma in Mass Communication at Federal
+                    Polytechnic Auchi.
+                  </p>
+                  <p>
+                    Also, has an Associate, Bachelor in Theology at Bethel
+                    University and Christian Philosophy PhD at Bethel University.
+                    Having a commitment to lifelong learning, he further attained
+                    a LL.B in Law at Ambrose Alli University at Ekpoma, Edo State.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Enterprise */}
+            <FadeIn direction="up">
+              <div className="bg-cream rounded-3xl p-8 md:p-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center">
+                    <Landmark className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-dark">Enterprise</h3>
+                </div>
+                <div className="space-y-4 text-gray-600 leading-relaxed">
+                  <p>
+                    Entrepreneurship across Education, Hospitality, Real Estate
+                    and Transportation. He is one of the directors of:
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="bg-white rounded-xl p-4 flex items-center gap-3">
+                      <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center shrink-0">
+                        <GraduationCap className="w-4 h-4 text-purple-600" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-dark text-sm">Evangel Ultimate Premium School</p>
+                        <p className="text-xs text-gray-500">Education</p>
+                      </div>
+                    </div>
+                    <div className="bg-white rounded-xl p-4 flex items-center gap-3">
+                      <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center shrink-0">
+                        <Star className="w-4 h-4 text-purple-600" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-dark text-sm">Evangel Ultimate Hotel</p>
+                        <p className="text-xs text-gray-500">Hospitality</p>
+                      </div>
+                    </div>
+                    <div className="bg-white rounded-xl p-4 flex items-center gap-3">
+                      <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center shrink-0">
+                        <Landmark className="w-4 h-4 text-purple-600" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-dark text-sm">Champion Multi-Purpose Projects</p>
+                        <p className="text-xs text-gray-500">Real Estate</p>
+                      </div>
+                    </div>
+                    <div className="bg-white rounded-xl p-4 flex items-center gap-3">
+                      <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center shrink-0">
+                        <Globe className="w-4 h-4 text-purple-600" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-dark text-sm">Turning Point Media</p>
+                        <p className="text-xs text-gray-500">Media</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Impact */}
+            <FadeIn direction="up">
+              <div className="bg-cream rounded-3xl p-8 md:p-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center">
+                    <HandHelping className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-dark">Impact & Humanitarian Service</h3>
+                </div>
+                <div className="space-y-4 text-gray-600 leading-relaxed">
+                  <p>
+                    He is into youth and human empowerment, humanitarian services,
+                    community development. He is the President and Founder of
+                    William Azemhe Azena Turning Point Foundation.
+                  </p>
+                  <p>
+                    The foundation runs an Annual Renunciation Programme aimed at
+                    helping offenders renounce amicably and turn a new life. The
+                    foundation provides scholarships, aids community development,
+                    and empowers medical outreach programmes to both rural and
+                    urban settlements.
+                  </p>
+                  <p>
+                    He is also the core organiser of the annual global outreach
+                    &quot;Let There Be Peace Match&quot; which has impacted
+                    individuals and caused positive change across communities.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Literary Ministry */}
+            <FadeIn direction="up">
+              <div className="bg-cream rounded-3xl p-8 md:p-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-gold rounded-xl flex items-center justify-center">
+                    <BookOpen className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-dark">Literary Ministry</h3>
+                </div>
+                <div className="space-y-4 text-gray-600 leading-relaxed">
+                  <p>
+                    Dr. Azemhe Azena is an author with over 17 books to his
+                    credit, including:
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {[
+                      "The Danger of Depending on a Man",
+                      "Victory over Foundational Battles",
+                      "Thinking Forward",
+                      "Life is a Market",
+                      "Oh Lord Guide my Decision",
+                    ].map((book) => (
+                      <div key={book} className="bg-white rounded-xl p-4 flex items-center gap-3">
+                        <BookMarked className="w-5 h-5 text-gold shrink-0" />
+                        <span className="text-sm font-medium text-dark italic">{book}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <p>
+                    Through his writings, teachings and public engagements, he has
+                    continued to communicate messages of faith, leadership,
+                    personal development and social transformation.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Political & Public Service */}
+            <FadeIn direction="up">
+              <div className="bg-cream rounded-3xl p-8 md:p-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center">
+                    <Crown className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-dark">Political & Public Service</h3>
+                </div>
+                <div className="space-y-4 text-gray-600 leading-relaxed">
+                  <p>
+                    Dr. Azemhe Azena has participated in the political process in
+                    Edo State. In 2023, he contested for the position of Governor
+                    of Edo State under the platform of the New Nigeria People&apos;s
+                    Party (NNPP) after he deflected from Labour Party.
+                  </p>
+                  <p>
+                    He is a seasoned politician known across Edo State and beyond.
+                    His involvement in public affairs reflects his broader
+                    interest in leadership, governance and the development of
+                    society. His public engagements have contributed to his
+                    recognition across Edo State and beyond.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Journey of Resilience */}
+            <FadeIn direction="up">
+              <div className="bg-gradient-to-br from-primary to-primary-dark rounded-3xl p-8 md:p-10 text-white">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                    <Star className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold">A Journey of Resilience & Determination</h3>
+                </div>
+                <div className="space-y-4 text-white/80 leading-relaxed">
+                  <p>
+                    His ministry and personal journey have impacted millions of
+                    lives across the world. His story is one of perseverance,
+                    determination and unwavering faith.
+                  </p>
+                  <p>
+                    From humble beginnings as a bike rider for almost a decade, a
+                    wheelbarrow pusher, a trained camera personnel, he pursued his
+                    vision with courage and consistency, overcoming challenges and
+                    remaining committed to his calling.
+                  </p>
+                  <p className="text-white font-medium text-lg italic">
+                    His journey demonstrates that humble beginnings do not
+                    determine the height of one&apos;s destiny.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Social Media & Contact */}
+            <FadeIn direction="up">
+              <div className="bg-cream rounded-3xl p-8 md:p-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+                    <Globe className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-dark">Connect</h3>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-white rounded-xl p-4">
+                    <p className="font-semibold text-dark text-sm mb-1">WhatsApp Numbers</p>
+                    <p className="text-gray-600 text-sm">090 9258 9071, 080 6497 001, 081 0765 9761</p>
+                  </div>
+                  <div className="bg-white rounded-xl p-4">
+                    <p className="font-semibold text-dark text-sm mb-1">Email</p>
+                    <p className="text-gray-600 text-sm">turningpointgospelcentre@gmail.com</p>
+                  </div>
+                  <div className="bg-white rounded-xl p-4">
+                    <p className="font-semibold text-dark text-sm mb-1">Ministry Address</p>
+                    <p className="text-gray-600 text-sm">
+                      Irabor Street off Ewan Street, Upper Mission Extension
+                      Uteh, Ikpoba Okha LGA, Benin City, Edo State
+                    </p>
+                  </div>
+                  <div className="bg-white rounded-xl p-4">
+                    <p className="font-semibold text-dark text-sm mb-1">Foundation Address</p>
+                    <p className="text-gray-600 text-sm">
+                      Plot 8, Aduwawa, Benin City, Edo State
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
       {/* Personal Values */}
       <section className="py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4">

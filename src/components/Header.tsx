@@ -22,6 +22,7 @@ const navLinks = [
     children: [
       { href: "/about#pastor", label: "Biography" },
       { href: "/about#history", label: "Journey" },
+      { href: "/about#profile", label: "Full Profile" },
       { href: "/about#vision", label: "Vision & Mission" },
     ],
   },
