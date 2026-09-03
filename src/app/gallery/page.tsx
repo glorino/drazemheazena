@@ -6,8 +6,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, Camera } from "lucide-react";
 import { FadeIn, StaggerChildren, StaggerItem } from "@/components/Animations";
 
-const galleryImages = Array.from({ length: 56 }, (_, i) => ({
-  src: `/gallery/gallery-${String(i + 1).padStart(3, "0")}${i === 7 ? ".png" : ".jpg"}`,
+const galleryImages = Array.from({ length: 68 }, (_, i) => ({
+  src: `/gallery/gallery-${String(i + 1).padStart(3, "0")}.jpg`,
   alt: `Dr. Azemhe Azena - Photo ${i + 1}`,
 }));
 
